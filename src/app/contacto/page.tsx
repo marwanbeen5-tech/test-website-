@@ -8,7 +8,7 @@ import { site, whatsappLink } from "@/lib/site";
 export const metadata = pageMeta(
   "/contacto",
   "Contactos e Suporte IPTV Portugal 24/7",
-  "Fale com o suporte IPTV Portugal por WhatsApp, 24 horas por dia, 7 dias por semana, em português. Ajuda com instalação, pagamentos, renovações e problemas técnicos."
+  "Fale com o suporte IPTV Portugal por WhatsApp, 24 horas por dia, em português. Ajuda com instalação, pagamentos, renovações e problemas técnicos."
 );
 
 const quickHelp = [
