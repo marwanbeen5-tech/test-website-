@@ -2,7 +2,7 @@ import Link from "next/link";
 import Logo from "./Logo";
 import Icon from "./Icon";
 import { CookieSettingsButton } from "./CookieBanner";
-import { legalLinks, nav, site } from "@/lib/site";
+import { legalLinks, nav, site, whatsappLink } from "@/lib/site";
 
 const paymentMethods = ["Visa", "Mastercard", "PayPal", "MB WAY", "Multibanco", "Apple Pay"];
 
@@ -58,7 +58,12 @@ export default function Footer() {
               <CookieSettingsButton />
             </li>
           </ul>
-          <p className="mt-6 text-sm text-muted">{site.email}</p>
+          <p className="mt-6 text-sm text-muted">
+            <a href={whatsappLink("Olá! Gostaria de mais informações.")} target="_blank" rel="noopener noreferrer" className="hover:text-fg">
+              WhatsApp: {site.phoneDisplay}
+            </a>
+          </p>
+          <p className="mt-1 text-sm text-muted">{site.email}</p>
         </div>
       </div>
       <p className="border-t border-border py-6 text-center text-xs text-muted">

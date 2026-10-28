@@ -9,7 +9,8 @@ export const site = {
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.portugaliptv.top",
   email: "suporte@example.com",
   // International format without "+" or spaces, used for wa.me links.
-  whatsapp: "351900000000",
+  whatsapp: "447882533020",
+  phoneDisplay: "+44 7882 533020",
   discountBanner: "8% DESCONTO - APENAS HOJE",
   // Shown on the privacy policy page (GDPR data controller).
   company: "StreamPro, Lda.",

@@ -23,7 +23,8 @@ export default function ContactoPage() {
           className="rounded-2xl border border-border bg-surface p-8 transition hover:border-brand/60"
         >
           <p className="text-lg font-bold text-fg">WhatsApp</p>
-          <p className="mt-2">Resposta rápida, normalmente em poucos minutos.</p>
+          <p className="mt-2 font-semibold text-fg">{site.phoneDisplay}</p>
+          <p className="mt-1">Resposta rápida, normalmente em poucos minutos.</p>
         </a>
         <a
           href={`mailto:${site.email}`}
