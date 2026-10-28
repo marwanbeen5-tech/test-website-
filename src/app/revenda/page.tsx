@@ -1,7 +1,13 @@
+import JsonLd from "@/components/JsonLd";
 import PageShell from "@/components/PageShell";
+import { breadcrumbLd, pageMeta } from "@/lib/seo";
 import { whatsappLink } from "@/lib/site";
 
-export const metadata = { title: "Revenda" };
+export const metadata = pageMeta(
+  "/revenda",
+  "Revenda IPTV Portugal: Torne-se Revendedor",
+  "Programa de revenda IPTV Portugal com painel próprio, créditos que não expiram, testes grátis para clientes e suporte prioritário 24/7."
+);
 
 const packs = [
   { credits: 50, price: 150 },
@@ -15,6 +21,7 @@ export default function RevendaPage() {
       title="Programa de Revenda"
       intro="Comece o seu próprio negócio de IPTV. Painel exclusivo, preços competitivos e suporte dedicado."
     >
+      <JsonLd data={breadcrumbLd([{ name: "Revenda", path: "/revenda" }])} />
       <div className="grid gap-6 md:grid-cols-3">
         {packs.map((p) => (
           <div

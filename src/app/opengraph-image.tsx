@@ -22,8 +22,8 @@ export default function OpengraphImage() {
           fontFamily: "sans-serif",
         }}
       >
-        <div style={{ fontSize: 36, color: "#ec4899", fontWeight: 700 }}>{site.tagline}</div>
-        <div style={{ fontSize: 96, fontWeight: 800, marginTop: 12 }}>{site.name}</div>
+        <div style={{ fontSize: 36, color: "#ec4899", fontWeight: 700 }}>{site.name}</div>
+        <div style={{ fontSize: 96, fontWeight: 800, marginTop: 12 }}>IPTV Portugal</div>
         <div style={{ fontSize: 40, marginTop: 24, color: "#d4d4e4" }}>
           +45.000 canais · 4K/UHD · Suporte 24/7
         </div>

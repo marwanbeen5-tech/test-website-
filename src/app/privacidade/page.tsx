@@ -1,7 +1,12 @@
 import PageShell from "@/components/PageShell";
+import { pageMeta } from "@/lib/seo";
 import { site } from "@/lib/site";
 
-export const metadata = { title: "Política de Privacidade" };
+export const metadata = pageMeta(
+  "/privacidade",
+  "Política de Privacidade",
+  `Como a ${site.name} recolhe, usa e protege os seus dados pessoais, de acordo com o RGPD.`
+);
 
 // Template text: have it reviewed for your business before going live.
 export default function PrivacidadePage() {

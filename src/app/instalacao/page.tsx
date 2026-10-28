@@ -1,6 +1,12 @@
+import JsonLd from "@/components/JsonLd";
 import PageShell from "@/components/PageShell";
+import { breadcrumbLd, pageMeta } from "@/lib/seo";
 
-export const metadata = { title: "Instalação" };
+export const metadata = pageMeta(
+  "/instalacao",
+  "Como Instalar IPTV Portugal: Smart TV, Android, Fire TV, iPhone",
+  "Guia de instalação do IPTV Portugal em Smart TV Samsung e LG, Android TV, Fire TV Stick, iPhone, Windows e Mac. Configure em menos de 5 minutos."
+);
 
 const guides = [
   {
@@ -43,6 +49,7 @@ export default function InstalacaoPage() {
       title="Guia de Instalação"
       intro="Configure o serviço no seu dispositivo em poucos minutos. Se precisar de ajuda, a nossa equipa está disponível 24/7."
     >
+      <JsonLd data={breadcrumbLd([{ name: "Instalação", path: "/instalacao" }])} />
       {guides.map((g) => (
         <div key={g.device} className="rounded-2xl border border-border bg-surface p-6">
           <h2 className="!mt-0">{g.device}</h2>

@@ -229,6 +229,36 @@ body {
 @keyframes dash {
   to { background-position: 16px 0; }
 }
+/* Hero football mockup (see Hero.tsx) */
+.animate-ball {
+  animation: ball 7s ease-in-out infinite;
+}
+.animate-player {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: player 4s ease-in-out infinite;
+}
+.animate-eq {
+  height: 100%;
+  transform-origin: bottom;
+  animation: eq 0.9s ease-in-out infinite;
+}
+@keyframes ball {
+  0%, 100% { transform: translate(140px, 80px); }
+  20% { transform: translate(200px, 74px); }
+  40% { transform: translate(178px, 116px); }
+  60% { transform: translate(250px, 108px); }
+  80% { transform: translate(230px, 62px); }
+}
+@keyframes player {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(6px, -4px); }
+}
+@keyframes eq {
+  0%, 100% { transform: scaleY(0.3); }
+  50% { transform: scaleY(1); }
+}
+
 @keyframes marquee {
   to { transform: translateX(-50%); }
 }

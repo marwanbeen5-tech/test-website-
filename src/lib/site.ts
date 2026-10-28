@@ -4,8 +4,9 @@ export const site = {
   name: "StreamPro",
   tagline: "IPTV Portugal",
   description:
-    "+45.000 canais ao vivo e 98.000 conteúdos on-demand em 4K/UHD. Ativação instantânea, reembolso em 7 dias e suporte 24/7.",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
+    "IPTV Portugal com +45.000 canais ao vivo, canais portugueses, desporto e 98.000 filmes e séries em 4K/UHD. Desde 4,75€/mês, ativação em minutos, reembolso em 7 dias e suporte 24/7.",
+  // Vercel redirects the bare domain to www, so www is the canonical address.
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.portugaliptv.top",
   email: "suporte@example.com",
   // International format without "+" or spaces, used for wa.me links.
   whatsapp: "351900000000",
@@ -147,7 +148,29 @@ export const testimonials = [
   },
 ];
 
+// Answers start with a direct, self-contained sentence so search engines and AI
+// assistants can quote them on their own.
 export const faqs = [
+  {
+    q: "O que é o IPTV Portugal?",
+    a: "IPTV Portugal é um serviço de televisão pela internet que permite ver canais portugueses e internacionais, desporto ao vivo, filmes e séries em qualquer dispositivo, sem antena, cabo ou fidelização. A StreamPro oferece +45.000 canais e 98.000 conteúdos on-demand em qualidade até 4K.",
+  },
+  {
+    q: "Quanto custa o IPTV em Portugal?",
+    a: "Na StreamPro, o IPTV Portugal custa desde 3€ por 24 horas, 14€ por mês ou 57€ por 12 meses (cerca de 4,75€ por mês) para 1 ecrã. Também existem planos para 2 e 3 ecrãs em simultâneo.",
+  },
+  {
+    q: "Qual é o melhor IPTV Portugal?",
+    a: "O melhor IPTV Portugal é aquele que combina estabilidade sem cortes, canais portugueses completos, qualidade 4K, guia de programação (EPG), suporte em português e garantia de reembolso. A StreamPro reúne todos estes pontos e permite testar o serviço 24 horas grátis antes de comprar.",
+  },
+  {
+    q: "Que velocidade de internet preciso para IPTV?",
+    a: "Recomendamos pelo menos 10 Mbps para HD, 15 Mbps para Full HD e 25 Mbps para 4K. Uma ligação por cabo de rede é mais estável do que Wi-Fi.",
+  },
+  {
+    q: "Posso ver canais portugueses fora de Portugal?",
+    a: "Sim. O serviço funciona em qualquer país com ligação à internet, por isso pode ver canais portugueses no estrangeiro, por exemplo em França, Suíça, Luxemburgo ou no Reino Unido.",
+  },
   {
     q: "Como posso pagar?",
     a: "Aceitamos cartão de crédito/débito, PayPal, MB WAY e transferência bancária. Após escolher o plano, enviamos-lhe as instruções de pagamento.",
@@ -174,26 +197,4 @@ export const faqs = [
   },
 ];
 
-export const posts = [
-  {
-    slug: "como-instalar-iptv-smart-tv",
-    title: "Como instalar IPTV numa Smart TV",
-    excerpt: "Guia passo a passo para configurar o serviço na sua Samsung ou LG em poucos minutos.",
-    date: "2026-10-01",
-    body: [
-      "Abra a loja de aplicações da sua Smart TV e procure uma aplicação de IPTV compatível (por exemplo, IPTV Smarters ou TiviMate em Android TV).",
-      "Instale a aplicação e abra-a. Escolha a opção de login com Xtream Codes ou lista M3U.",
-      "Introduza as credenciais que recebeu por email e aguarde o carregamento dos canais.",
-    ],
-  },
-  {
-    slug: "melhor-velocidade-internet-4k",
-    title: "Que velocidade de internet preciso para 4K?",
-    excerpt: "Descubra a velocidade recomendada para ver conteúdos em HD, Full HD e 4K sem interrupções.",
-    date: "2026-09-15",
-    body: [
-      "Para HD recomendamos pelo menos 10 Mbps, para Full HD 15 Mbps e para 4K pelo menos 25 Mbps.",
-      "Sempre que possível, ligue o dispositivo por cabo de rede em vez de Wi-Fi para uma ligação mais estável.",
-    ],
-  },
-];
+export { posts, type Post } from "./posts";

@@ -1,8 +1,13 @@
 import LeadForm from "@/components/LeadForm";
 import PageShell from "@/components/PageShell";
+import { pageMeta } from "@/lib/seo";
 import { site, whatsappLink } from "@/lib/site";
 
-export const metadata = { title: "Contacte-nos" };
+export const metadata = pageMeta(
+  "/contacto",
+  "Contactos e Suporte IPTV Portugal 24/7",
+  "Fale com o suporte IPTV Portugal da StreamPro por WhatsApp ou email, 24 horas por dia, 7 dias por semana, em português."
+);
 
 export default function ContactoPage() {
   return (

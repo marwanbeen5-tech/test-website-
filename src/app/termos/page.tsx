@@ -1,7 +1,8 @@
 import PageShell from "@/components/PageShell";
+import { pageMeta } from "@/lib/seo";
 import { site } from "@/lib/site";
 
-export const metadata = { title: "Termos e Condições" };
+export const metadata = pageMeta("/termos", "Termos e Condições", `Termos e condições do serviço ${site.name}.`);
 
 export default function TermosPage() {
   return (

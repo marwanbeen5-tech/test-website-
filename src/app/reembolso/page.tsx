@@ -1,7 +1,12 @@
 import PageShell from "@/components/PageShell";
+import { pageMeta } from "@/lib/seo";
 import { site } from "@/lib/site";
 
-export const metadata = { title: "Política de Reembolso" };
+export const metadata = pageMeta(
+  "/reembolso",
+  "Política de Reembolso",
+  `Garantia de reembolso de 7 dias da ${site.name}: como pedir e prazos.`
+);
 
 export default function ReembolsoPage() {
   return (
