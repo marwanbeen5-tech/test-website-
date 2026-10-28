@@ -18,7 +18,7 @@ export default function Comparison() {
     <section className="mx-auto max-w-4xl px-4 py-20">
       <SectionHeading
         eyebrow="Comparação"
-        title={`${site.name} vs TV por Cabo`}
+        title="IPTV vs TV por Cabo"
         text="Mais canais, mais qualidade e sem fidelização, por uma fração do preço."
       />
       <div className="overflow-x-auto rounded-2xl border border-border bg-surface">

@@ -6,7 +6,7 @@ import { site, whatsappLink } from "@/lib/site";
 export const metadata = pageMeta(
   "/contacto",
   "Contactos e Suporte IPTV Portugal 24/7",
-  "Fale com o suporte IPTV Portugal da StreamPro por WhatsApp ou email, 24 horas por dia, 7 dias por semana, em português."
+  "Fale com o nosso suporte IPTV Portugal por WhatsApp ou email, 24 horas por dia, 7 dias por semana, em português."
 );
 
 export default function ContactoPage() {

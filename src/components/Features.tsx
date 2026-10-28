@@ -2,14 +2,14 @@ import CountUp from "./CountUp";
 import Icon from "./Icon";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
-import { features, site, stats } from "@/lib/site";
+import { features, stats } from "@/lib/site";
 
 export default function Features() {
   return (
     <section id="beneficios" className="mx-auto max-w-7xl scroll-mt-20 px-4 py-24">
       <SectionHeading
         eyebrow="Benefícios"
-        title={`Porquê Escolher a ${site.name}?`}
+        title="Porquê Escolher o Nosso IPTV Portugal?"
         text="Experiencie IPTV premium com funcionalidades de ponta para a melhor experiência de streaming."
       />
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

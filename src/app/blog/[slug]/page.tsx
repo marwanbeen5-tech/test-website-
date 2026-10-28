@@ -118,7 +118,7 @@ export default async function PostPage({ params }: Props) {
       </article>
 
       <div className="bg-animated relative overflow-hidden rounded-2xl p-8 text-white">
-        <p className="text-2xl font-extrabold">Experimente o IPTV Portugal da {site.name}</p>
+        <p className="text-2xl font-extrabold">Experimente o nosso IPTV Portugal</p>
         <p className="mt-2 text-white/85">+45.000 canais em 4K, teste grátis de 24 horas e reembolso em 7 dias.</p>
         <div className="mt-6 flex flex-col gap-3 sm:flex-row">
           <Link href="/#planos" className="btn-shine rounded-full bg-white px-6 py-2.5 text-center font-semibold text-black">

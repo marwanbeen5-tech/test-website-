@@ -8,7 +8,7 @@ export default function TermosPage() {
   return (
     <PageShell title="Termos e Condições">
       <p>
-        Ao utilizar os serviços da {site.name}, concorda com os presentes termos. Substitua este texto pelos
+        Ao utilizar os nossos serviços, concorda com os presentes termos. Substitua este texto pelos
         seus termos e condições reais.
       </p>
       <h2>1. Serviço</h2>

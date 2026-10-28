@@ -31,7 +31,7 @@ export function websiteLd() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: site.name,
-    alternateName: `${site.name} ${KEYWORD}`,
+    alternateName: "portugaliptv.top",
     url: site.url,
     inLanguage: "pt-PT",
   };
@@ -63,7 +63,7 @@ export function productLd() {
   return {
     "@context": "https://schema.org",
     "@type": "Product",
-    name: `${KEYWORD} - Subscrição ${site.name}`,
+    name: `Subscrição ${KEYWORD}`,
     description: site.description,
     brand: { "@type": "Brand", name: site.name },
     image: `${site.url}/opengraph-image`,

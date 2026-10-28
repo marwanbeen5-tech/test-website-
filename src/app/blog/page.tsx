@@ -21,7 +21,7 @@ export default function BlogPage() {
         data={{
           "@context": "https://schema.org",
           "@type": "Blog",
-          name: `Blog ${site.name} IPTV Portugal`,
+          name: "Blog IPTV Portugal",
           url: `${site.url}/blog`,
           inLanguage: "pt-PT",
           blogPost: posts.map((p) => ({

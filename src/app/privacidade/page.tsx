@@ -5,7 +5,7 @@ import { site } from "@/lib/site";
 export const metadata = pageMeta(
   "/privacidade",
   "Política de Privacidade",
-  `Como a ${site.name} recolhe, usa e protege os seus dados pessoais, de acordo com o RGPD.`
+  "Como recolhemos, usamos e protegemos os seus dados pessoais, de acordo com o RGPD."
 );
 
 // Template text: have it reviewed for your business before going live.

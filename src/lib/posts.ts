@@ -36,7 +36,7 @@ export const posts: Post[] = [
       {
         heading: "2. Canais portugueses e conteúdo on-demand",
         paragraphs: [
-          "Confirme que o serviço inclui canais generalistas, de notícias, desporto e entretenimento portugueses, além de uma biblioteca de filmes e séries (VOD). A StreamPro inclui +45.000 canais de 115 países e 98.000 conteúdos on-demand.",
+          "Confirme que o serviço inclui canais generalistas, de notícias, desporto e entretenimento portugueses, além de uma biblioteca de filmes e séries (VOD). O nosso serviço inclui +45.000 canais de 115 países e 98.000 conteúdos on-demand.",
         ],
       },
       {
@@ -48,7 +48,7 @@ export const posts: Post[] = [
       {
         heading: "4. Preço e planos",
         paragraphs: [
-          "Em Portugal, um bom serviço de IPTV custa normalmente entre 10€ e 15€ por mês, e menos em planos anuais. Na StreamPro o plano de 12 meses fica em cerca de 4,75€ por mês.",
+          "Em Portugal, um bom serviço de IPTV custa normalmente entre 10€ e 15€ por mês, e menos em planos anuais. No nosso serviço, o plano de 12 meses fica em cerca de 4,75€ por mês.",
         ],
       },
       {
@@ -193,7 +193,7 @@ export const posts: Post[] = [
     sections: [
       {
         paragraphs: [
-          "As melhores aplicações IPTV em 2026 são IPTV Smarters Pro (todos os dispositivos), TiviMate (Android TV e Fire TV), IBO Player (Smart TV Samsung e LG) e GSE Smart IPTV (iPhone e iPad). Todas funcionam com o serviço StreamPro.",
+          "As melhores aplicações IPTV em 2026 são IPTV Smarters Pro (todos os dispositivos), TiviMate (Android TV e Fire TV), IBO Player (Smart TV Samsung e LG) e GSE Smart IPTV (iPhone e iPad). Todas funcionam com o nosso serviço.",
         ],
       },
       {

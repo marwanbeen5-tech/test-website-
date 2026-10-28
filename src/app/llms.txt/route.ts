@@ -3,7 +3,7 @@ import { faqs, plans, posts, site } from "@/lib/site";
 // Plain-text summary for AI assistants (llms.txt convention).
 export function GET() {
   const prices = plans[1].map((p) => `- ${p.duration}: ${p.price}€`).join("\n");
-  const body = `# ${site.name} - IPTV Portugal
+  const body = `# ${site.name} (portugaliptv.top)
 
 > ${site.description}
 

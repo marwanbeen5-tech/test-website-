@@ -196,7 +196,7 @@ export default function Hero() {
             className="animate-fade-up mt-6 text-sm font-semibold uppercase tracking-widest text-muted"
             style={{ animationDelay: "0.1s" }}
           >
-            {site.name} · O seu serviço de IPTV em Portugal
+            O seu serviço de IPTV em Portugal
           </p>
           <h1
             className="animate-fade-up mt-4 text-4xl font-extrabold leading-tight md:text-5xl xl:text-6xl"

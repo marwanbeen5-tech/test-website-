@@ -15,8 +15,8 @@ import { faqLd, productLd } from "@/lib/seo";
 import { site } from "@/lib/site";
 
 export const metadata = {
-  // `absolute` skips the "| StreamPro" template so the keyword leads the title.
-  title: { absolute: `IPTV Portugal | +45.000 Canais em 4K desde 4,75€/mês - ${site.name}` },
+  // `absolute` skips the "| <brand>" template so the keyword leads the title.
+  title: { absolute: "IPTV Portugal | +45.000 Canais em 4K desde 4,75€/mês" },
   description: site.description,
   alternates: { canonical: "/", languages: { "pt-PT": "/" } },
 };

@@ -1,7 +1,7 @@
 // Edit this file to change the brand, contact details, prices and texts.
 
 export const site = {
-  name: "StreamPro",
+  name: "Portugal IPTV",
   tagline: "IPTV Portugal",
   description:
     "IPTV Portugal com +45.000 canais ao vivo, canais portugueses, desporto e 98.000 filmes e séries em 4K/UHD. Desde 4,75€/mês, ativação em minutos, reembolso em 7 dias e suporte 24/7.",
@@ -13,7 +13,7 @@ export const site = {
   phoneDisplay: "+44 7882 533020",
   discountBanner: "8% DESCONTO - APENAS HOJE",
   // Shown on the privacy policy page (GDPR data controller).
-  company: "StreamPro, Lda.",
+  company: "Portugal IPTV",
   address: "Lisboa, Portugal",
 };
 
@@ -154,15 +154,15 @@ export const testimonials = [
 export const faqs = [
   {
     q: "O que é o IPTV Portugal?",
-    a: "IPTV Portugal é um serviço de televisão pela internet que permite ver canais portugueses e internacionais, desporto ao vivo, filmes e séries em qualquer dispositivo, sem antena, cabo ou fidelização. A StreamPro oferece +45.000 canais e 98.000 conteúdos on-demand em qualidade até 4K.",
+    a: "IPTV Portugal é um serviço de televisão pela internet que permite ver canais portugueses e internacionais, desporto ao vivo, filmes e séries em qualquer dispositivo, sem antena, cabo ou fidelização. O nosso serviço oferece +45.000 canais e 98.000 conteúdos on-demand em qualidade até 4K.",
   },
   {
     q: "Quanto custa o IPTV em Portugal?",
-    a: "Na StreamPro, o IPTV Portugal custa desde 3€ por 24 horas, 14€ por mês ou 57€ por 12 meses (cerca de 4,75€ por mês) para 1 ecrã. Também existem planos para 2 e 3 ecrãs em simultâneo.",
+    a: "O nosso IPTV Portugal custa desde 3€ por 24 horas, 14€ por mês ou 57€ por 12 meses (cerca de 4,75€ por mês) para 1 ecrã. Também existem planos para 2 e 3 ecrãs em simultâneo.",
   },
   {
     q: "Qual é o melhor IPTV Portugal?",
-    a: "O melhor IPTV Portugal é aquele que combina estabilidade sem cortes, canais portugueses completos, qualidade 4K, guia de programação (EPG), suporte em português e garantia de reembolso. A StreamPro reúne todos estes pontos e permite testar o serviço 24 horas grátis antes de comprar.",
+    a: "O melhor IPTV Portugal é aquele que combina estabilidade sem cortes, canais portugueses completos, qualidade 4K, guia de programação (EPG), suporte em português e garantia de reembolso. O nosso serviço reúne todos estes pontos e permite testar o serviço 24 horas grátis antes de comprar.",
   },
   {
     q: "Que velocidade de internet preciso para IPTV?",

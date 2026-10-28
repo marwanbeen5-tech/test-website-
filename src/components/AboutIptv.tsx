@@ -31,7 +31,7 @@ export default function AboutIptv() {
               na Smart TV, Android TV, Fire TV Stick, telemóvel ou computador.
             </p>
             <p>
-              Com a <strong className="text-fg">{site.name}</strong> tem acesso a +45.000 canais ao vivo, incluindo
+              Com o nosso serviço tem acesso a +45.000 canais ao vivo, incluindo
               canais portugueses de notícias, desporto e entretenimento, e a mais de 98.000 filmes e séries
               on-demand, com qualidade até 4K e sem fidelização.
             </p>
@@ -60,7 +60,7 @@ export default function AboutIptv() {
           <div className="overflow-hidden rounded-2xl border border-border bg-surface">
             <table className="w-full text-sm">
               <caption className="border-b border-border px-5 py-4 text-left font-bold">
-                {site.name} IPTV Portugal: resumo do serviço
+                IPTV Portugal: resumo do serviço
               </caption>
               <tbody>
                 {facts.map(([k, v]) => (

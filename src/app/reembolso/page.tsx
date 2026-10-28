@@ -5,14 +5,14 @@ import { site } from "@/lib/site";
 export const metadata = pageMeta(
   "/reembolso",
   "Política de Reembolso",
-  `Garantia de reembolso de 7 dias da ${site.name}: como pedir e prazos.`
+  "Garantia de reembolso de 7 dias do nosso IPTV Portugal: como pedir e prazos."
 );
 
 export default function ReembolsoPage() {
   return (
     <PageShell title="Política de Reembolso">
       <p>
-        Na {site.name} queremos que fique satisfeito. Se o serviço não corresponder às suas expectativas, pode
+        Queremos que fique satisfeito. Se o serviço não corresponder às suas expectativas, pode
         pedir o reembolso total nos primeiros 7 dias após a compra.
       </p>
       <h2>Como pedir</h2>
