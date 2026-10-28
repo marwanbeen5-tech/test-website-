@@ -50,7 +50,6 @@ export function organizationLd() {
       "@type": "ContactPoint",
       contactType: "customer support",
       email: site.email,
-      telephone: `+${site.whatsapp}`,
       availableLanguage: ["Portuguese"],
       hoursAvailable: "Mo-Su 00:00-23:59",
     },
