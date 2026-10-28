@@ -17,51 +17,84 @@ export const posts: Post[] = [
     slug: "melhor-iptv-portugal",
     title: "Melhor IPTV Portugal em 2026: guia completo para escolher",
     excerpt:
-      "O que avaliar antes de escolher um serviço de IPTV Portugal: canais, estabilidade, qualidade, preço, suporte e garantia.",
+      "O que avaliar antes de escolher um serviço de IPTV Portugal: canais, estabilidade, qualidade, preço, suporte, garantia e sinais de alerta.",
     keyword: "melhor IPTV Portugal",
     category: "Guias",
     date: "2026-10-28",
     sections: [
       {
         paragraphs: [
-          "O melhor IPTV Portugal é um serviço estável, com canais portugueses completos, qualidade até 4K, guia de programação (EPG), suporte em português e garantia de reembolso. Neste guia explicamos cada critério para que possa comparar serviços com confiança.",
+          "O melhor IPTV Portugal é um serviço estável, com canais portugueses completos, qualidade até 4K, guia de programação (EPG), suporte em português e garantia de reembolso. Neste guia explicamos cada critério, os sinais de alerta a evitar e como testar um serviço antes de pagar.",
+          "Há dezenas de ofertas de IPTV em Portugal e quase todas prometem o mesmo: milhares de canais, 4K e zero cortes. Na prática, a diferença entre um bom e um mau serviço só se nota ao fim de umas semanas, normalmente a meio de um jogo de futebol. Por isso vale a pena saber exatamente o que procurar.",
         ],
       },
       {
         heading: "1. Estabilidade e servidores antifreeze",
         paragraphs: [
-          "Cortes e buffering são a principal queixa de quem usa IPTV. Prefira serviços com servidores dedicados e tecnologia antifreeze, que mantêm a imagem fluida mesmo em jogos de futebol com muita audiência.",
+          "Cortes e buffering são a principal queixa de quem usa IPTV. A estabilidade depende sobretudo da qualidade dos servidores do fornecedor e de quantos clientes partilham cada servidor.",
+          "Prefira serviços com tecnologia antifreeze, que guarda alguns segundos de vídeo em memória e troca automaticamente de fonte quando um servidor falha. Os jogos de futebol ao fim de semana são o momento de maior tráfego: um serviço que aguenta um clássico à noite sem cortes é um bom sinal.",
         ],
       },
       {
         heading: "2. Canais portugueses e conteúdo on-demand",
         paragraphs: [
-          "Confirme que o serviço inclui canais generalistas, de notícias, desporto e entretenimento portugueses, além de uma biblioteca de filmes e séries (VOD). O nosso serviço inclui +45.000 canais de 115 países e 98.000 conteúdos on-demand.",
+          "Confirme que o serviço inclui os canais generalistas, de notícias, desporto, entretenimento e infantis que costuma ver. Peça a lista de canais ou veja-a durante o teste: um número grande de canais não serve de nada se faltarem os que lhe interessam.",
+          "Verifique também a biblioteca de filmes e séries (VOD): se está organizada por categorias, se tem legendas em português e se é atualizada com frequência. O nosso serviço inclui +45.000 canais de 115 países e 98.000 conteúdos on-demand.",
         ],
       },
       {
         heading: "3. Qualidade de imagem",
         paragraphs: [
-          "Procure canais em Full HD e 4K/UHD. Para 4K precisa de pelo menos 25 Mbps de internet e de um dispositivo compatível.",
+          "Procure canais em Full HD e 4K/UHD, mas lembre-se de que a qualidade final depende da sua internet e do seu dispositivo. Para 4K precisa de pelo menos 25 Mbps por ecrã e de uma TV ou box compatível.",
+          "Um bom serviço oferece várias versões do mesmo canal (SD, HD, 4K), para poder baixar a qualidade quando a internet está mais lenta em vez de ficar com a imagem parada.",
         ],
       },
       {
-        heading: "4. Preço e planos",
+        heading: "4. Guia de programação (EPG) e funcionalidades",
         paragraphs: [
-          "Em Portugal, um bom serviço de IPTV custa normalmente entre 10€ e 15€ por mês, e menos em planos anuais. No nosso serviço, o plano de 12 meses fica em cerca de 4,75€ por mês.",
+          "O EPG mostra o que está a dar em cada canal, tal como na TV por cabo. Sem ele, encontrar um programa é muito mais difícil. Confirme também se o serviço funciona com as aplicações que prefere (IPTV Smarters, TiviMate, IBO Player) e se permite ver em vários ecrãs ao mesmo tempo.",
         ],
       },
       {
-        heading: "5. Teste grátis, suporte e reembolso",
+        heading: "5. Preço e planos",
+        paragraphs: [
+          "Em Portugal, um bom serviço de IPTV custa normalmente entre 10€ e 15€ por mês, e bastante menos em planos anuais. No nosso serviço, o plano de 12 meses fica em cerca de 4,75€ por mês.",
+          "Desconfie de preços muito abaixo da média: servidores de qualidade têm custos, e um serviço demasiado barato costuma compensar com servidores sobrelotados. Prefira também planos sem renovação automática, para controlar quando paga.",
+        ],
+      },
+      {
+        heading: "6. Teste grátis, suporte e reembolso",
         paragraphs: [
           "Um serviço de confiança deixa-o experimentar antes de pagar, responde rapidamente em português e devolve o dinheiro se não ficar satisfeito.",
         ],
         list: ["Teste grátis de 24 horas", "Suporte 24/7 por WhatsApp", "Reembolso em 7 dias"],
       },
       {
+        heading: "Sinais de alerta",
+        paragraphs: ["Evite serviços que apresentem algum destes sinais:"],
+        list: [
+          "Não oferecem teste nem qualquer garantia de reembolso.",
+          "Só aceitam pagamentos difíceis de reaver, sem qualquer proteção para o comprador.",
+          "Não têm forma de contacto clara nem respondem antes da compra.",
+          "Prometem tudo por um preço muito abaixo do mercado.",
+          "Não indicam quantos ecrãs pode usar em simultâneo.",
+        ],
+      },
+      {
+        heading: "Como testar um serviço de IPTV",
+        paragraphs: ["Durante o teste, faça esta verificação rápida:"],
+        list: [
+          "Veja um jogo ou um programa em direto à noite, a hora de maior tráfego.",
+          "Troque de canal várias vezes e veja quanto tempo demora a carregar.",
+          "Experimente um filme em 4K e confirme se a imagem se mantém estável.",
+          "Abra o guia de programação e verifique se está correto.",
+          "Envie uma pergunta ao suporte e veja quanto tempo demora a responder.",
+        ],
+      },
+      {
         heading: "Conclusão",
         paragraphs: [
-          "Antes de escolher, peça um teste, veja um jogo ao vivo à noite (a hora de maior tráfego) e confirme se a imagem se mantém estável. Se passar nesse teste, encontrou um bom IPTV.",
+          "O melhor IPTV Portugal não é o que tem mais canais, mas o que funciona sem cortes nos canais que vê, tem bom suporte e deixa-o testar antes de pagar. Use os critérios deste guia, faça o teste à noite e decida com base no que viu, não no que foi prometido.",
         ],
       },
     ],
@@ -70,42 +103,75 @@ export const posts: Post[] = [
     slug: "iptv-ou-tv-por-cabo",
     title: "IPTV ou TV por cabo: o que compensa mais em Portugal?",
     excerpt:
-      "Comparámos preço, canais, contratos e qualidade entre IPTV e os pacotes tradicionais de TV por cabo em Portugal.",
+      "Comparámos preço, canais, contratos, qualidade e fiabilidade entre IPTV e os pacotes tradicionais de TV por cabo em Portugal.",
     keyword: "IPTV ou TV cabo",
     category: "Comparações",
     date: "2026-10-22",
     sections: [
       {
         paragraphs: [
-          "Para a maioria das famílias, o IPTV compensa mais do que a TV por cabo: custa menos por mês, não exige fidelização de 24 meses e funciona em vários dispositivos. A TV por cabo continua a fazer sentido para quem quer tudo num só pacote com internet e telefone.",
+          "Para a maioria das famílias, o IPTV compensa mais do que a TV por cabo: custa menos por mês, não exige fidelização e funciona em vários dispositivos. A TV por cabo continua a fazer sentido para quem quer tudo num só pacote, com instalação feita por um técnico e o mínimo de configuração.",
+          "Neste artigo comparamos as duas opções ponto a ponto, com as vantagens e desvantagens de cada uma, para que possa decidir com base no seu caso.",
         ],
       },
       {
         heading: "Preço",
         paragraphs: [
-          "Um pacote de TV por cabo em Portugal custa geralmente entre 40€ e 80€ por mês, quase sempre com internet incluída. Um serviço de IPTV custa entre 5€ e 15€ por mês e usa a internet que já tem.",
+          "Um pacote de TV por cabo em Portugal custa geralmente entre 40€ e 80€ por mês, quase sempre com internet e telefone incluídos. Os canais premium de desporto e cinema são normalmente pagos à parte.",
+          "Um serviço de IPTV custa entre 5€ e 15€ por mês, mas precisa de uma ligação à internet. Se já paga internet, o IPTV é um custo adicional pequeno. Se não tem internet em casa, tem de somar esse valor à comparação.",
         ],
       },
       {
         heading: "Canais e conteúdos",
         paragraphs: [
-          "A TV por cabo oferece normalmente 100 a 200 canais. Um serviço IPTV pode incluir milhares de canais de vários países, além de filmes e séries a pedido.",
+          "A TV por cabo oferece normalmente 100 a 200 canais, sobretudo nacionais. Um serviço IPTV pode incluir milhares de canais de vários países, além de filmes e séries a pedido, o que faz diferença para quem segue desporto internacional ou tem família de outros países.",
         ],
       },
       {
         heading: "Contrato e flexibilidade",
         paragraphs: [
-          "Os operadores de cabo pedem muitas vezes fidelização de 24 meses. No IPTV paga por períodos (1 dia, 1 mês, 1 ano) e não renova se não quiser.",
+          "Os operadores de cabo propõem muitas vezes fidelização de 24 meses em troca de um preço mais baixo. Sair antes do fim pode implicar penalizações. A lei obriga os operadores a ter também ofertas sem fidelização, mas costumam ser mais caras.",
+          "No IPTV paga por períodos (1 dia, 1 mês, 1 ano) e decide no fim de cada período se quer continuar. Não há técnico, nem equipamento para devolver.",
         ],
       },
       {
-        heading: "Resumo",
-        paragraphs: ["Escolha IPTV se quer:"],
+        heading: "Qualidade de imagem e fiabilidade",
+        paragraphs: [
+          "A TV por cabo tem uma vantagem clara em fiabilidade: o sinal chega por uma rede dedicada e raramente falha. O IPTV depende da sua internet e dos servidores do fornecedor, por isso a qualidade varia mais de serviço para serviço.",
+          "Com uma boa ligação (25 Mbps ou mais) e um fornecedor com servidores estáveis, o IPTV oferece imagem em Full HD e 4K comparável ou superior à do cabo. Por isso é importante fazer um teste antes de mudar.",
+        ],
+      },
+      {
+        heading: "Dispositivos e mobilidade",
+        paragraphs: [
+          "A TV por cabo funciona na box do operador, normalmente numa ou duas TVs. O IPTV funciona na Smart TV, Fire TV Stick, telemóvel, tablet e computador, em casa ou de férias, desde que tenha internet.",
+        ],
+      },
+      {
+        heading: "Vantagens e desvantagens",
+        paragraphs: ["IPTV:"],
         list: [
-          "Pagar menos todos os meses",
-          "Ver em vários dispositivos, em casa ou fora",
-          "Mais canais internacionais e conteúdos on-demand",
-          "Liberdade para cancelar quando quiser",
+          "Mais barato e sem fidelização.",
+          "Mais canais e conteúdos on-demand.",
+          "Funciona em qualquer dispositivo e fora de casa.",
+          "Depende da qualidade da internet e do fornecedor.",
+          "Exige instalar uma aplicação (alguns minutos).",
+        ],
+      },
+      {
+        paragraphs: ["TV por cabo:"],
+        list: [
+          "Muito fiável e simples de usar.",
+          "Instalação e assistência técnica no local.",
+          "Mais cara, sobretudo com canais premium.",
+          "Normalmente com fidelização de 24 meses.",
+        ],
+      },
+      {
+        heading: "Qual escolher?",
+        paragraphs: [
+          "Escolha IPTV se quer pagar menos, ver em vários dispositivos e ter mais canais internacionais e conteúdos on-demand, e se tem uma internet estável. Fique com a TV por cabo se valoriza acima de tudo a simplicidade e não se importa de pagar mais por isso.",
+          "Também pode combinar os dois: muitas famílias mantêm um pacote de internet com poucos canais e usam IPTV para o desporto, os filmes e os canais internacionais.",
         ],
       },
     ],
@@ -148,7 +214,7 @@ export const posts: Post[] = [
   {
     slug: "instalar-iptv-fire-tv-stick",
     title: "Como instalar IPTV no Fire TV Stick (guia 2026)",
-    excerpt: "Transforme qualquer televisão numa Smart TV com IPTV usando um Amazon Fire TV Stick.",
+    excerpt: "Transforme qualquer televisão numa Smart TV com IPTV usando um Amazon Fire TV Stick, passo a passo.",
     keyword: "IPTV Fire TV Stick",
     category: "Instalação",
     date: "2026-10-08",
@@ -156,29 +222,67 @@ export const posts: Post[] = [
       {
         paragraphs: [
           "Para instalar IPTV no Fire TV Stick, ative a instalação de apps de origem desconhecida, instale a aplicação Downloader, descarregue a app IPTV e entre com os seus dados de acesso. Todo o processo demora cerca de 10 minutos.",
+          "O Fire TV Stick da Amazon é uma das formas mais baratas e fiáveis de ver IPTV: liga-se à porta HDMI de qualquer televisão, mesmo antiga, e corre as melhores aplicações IPTV, como o TiviMate e o IPTV Smarters.",
         ],
       },
       {
-        heading: "1. Preparar o Fire TV Stick",
+        heading: "O que precisa",
         paragraphs: [],
         list: [
-          "Vá a Definições → A minha Fire TV → Opções de programador.",
-          "Ative “Aplicações de origem desconhecida” para a app Downloader.",
+          "Um Fire TV Stick (o modelo 4K é o mais indicado para canais em 4K).",
+          "Uma ligação à internet de pelo menos 10 Mbps (25 Mbps para 4K).",
+          "Os dados de acesso que recebeu por email (utilizador, palavra-passe e URL do servidor).",
         ],
       },
       {
-        heading: "2. Instalar a aplicação IPTV",
+        heading: "1. Ativar as opções de programador",
+        paragraphs: [
+          "Nos modelos mais recentes, as opções de programador estão escondidas. Para as mostrar:",
+        ],
+        list: [
+          "Vá a Definições → A minha Fire TV → Acerca de.",
+          "Selecione o nome do dispositivo e carregue no botão central do comando 7 vezes seguidas.",
+          "Volte atrás: aparece agora o menu “Opções de programador”.",
+        ],
+      },
+      {
+        heading: "2. Preparar o Fire TV Stick",
         paragraphs: [],
         list: [
           "Na loja da Amazon, procure e instale a aplicação Downloader.",
-          "Abra o Downloader e introduza o endereço da aplicação IPTV indicado pelo nosso suporte.",
-          "Instale a aplicação e abra-a.",
+          "Vá a Definições → A minha Fire TV → Opções de programador.",
+          "Ative “Instalar aplicações desconhecidas” para a app Downloader.",
         ],
       },
       {
-        heading: "3. Entrar na conta",
+        heading: "3. Instalar a aplicação IPTV",
+        paragraphs: [],
+        list: [
+          "Abra o Downloader e introduza o endereço da aplicação IPTV indicado pelo nosso suporte.",
+          "Aguarde a transferência e escolha “Instalar”.",
+          "No fim, apague o ficheiro de instalação para libertar espaço.",
+        ],
+      },
+      {
+        heading: "4. Entrar na conta",
         paragraphs: [
-          "Escolha login com Xtream Codes, introduza o utilizador, a palavra-passe e o URL do servidor que recebeu por email. Os canais, filmes e séries aparecem em poucos segundos.",
+          "Abra a aplicação, escolha login com Xtream Codes e introduza o utilizador, a palavra-passe e o URL do servidor que recebeu por email. Os canais, filmes e séries aparecem em poucos segundos. Na primeira vez, o guia de programação (EPG) pode demorar um minuto a carregar.",
+        ],
+      },
+      {
+        heading: "Problemas comuns",
+        paragraphs: [],
+        list: [
+          "“Não aparecem as Opções de programador”: repita o passo 1 e carregue 7 vezes no nome do dispositivo.",
+          "“O Downloader não consegue descarregar”: confirme o endereço com o suporte e verifique a internet.",
+          "“A imagem para”: ligue o Fire TV Stick ao router com um adaptador Ethernet e veja o nosso guia contra o buffering.",
+          "“Pouco espaço”: desinstale aplicações que não usa em Definições → Aplicações.",
+        ],
+      },
+      {
+        heading: "Dicas para a melhor experiência",
+        paragraphs: [
+          "Mantenha o Fire TV Stick atualizado, reinicie-o uma vez por semana e, se usar Wi-Fi, coloque o router o mais perto possível da TV. Se tiver dúvidas em qualquer passo, o nosso suporte ajuda-o pelo WhatsApp.",
         ],
       },
     ],

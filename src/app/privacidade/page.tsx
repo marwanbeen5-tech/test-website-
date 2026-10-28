@@ -1,17 +1,19 @@
+import JsonLd from "@/components/JsonLd";
 import PageShell from "@/components/PageShell";
-import { pageMeta } from "@/lib/seo";
-import { site } from "@/lib/site";
+import { breadcrumbLd, pageMeta } from "@/lib/seo";
+import { site, supportContact } from "@/lib/site";
 
 export const metadata = pageMeta(
   "/privacidade",
   "Política de Privacidade",
-  "Como recolhemos, usamos e protegemos os seus dados pessoais, de acordo com o RGPD."
+  "Como recolhemos, usamos e protegemos os seus dados pessoais de acordo com o RGPD: que dados guardamos, com quem os partilhamos, cookies e os seus direitos."
 );
 
 // Template text: have it reviewed for your business before going live.
 export default function PrivacidadePage() {
   return (
     <PageShell title="Política de Privacidade" intro="Última atualização: outubro de 2026">
+      <JsonLd data={breadcrumbLd([{ name: "Política de Privacidade", path: "/privacidade" }])} />
       <p>
         A {site.company}, com sede em {site.address} (&ldquo;nós&rdquo;), é responsável pelo tratamento dos seus
         dados pessoais, de acordo com o Regulamento Geral sobre a Proteção de Dados (RGPD).
@@ -42,7 +44,7 @@ export default function PrivacidadePage() {
       <h2>Os seus direitos</h2>
       <p>
         Pode pedir acesso, retificação, eliminação ou portabilidade dos seus dados, ou opor-se ao seu tratamento,
-        escrevendo para {site.email}. Tem ainda o direito de apresentar queixa à CNPD (www.cnpd.pt).
+        contactando-nos por {supportContact()}. Tem ainda o direito de apresentar queixa à CNPD (www.cnpd.pt).
       </p>
       <h2>Conservação</h2>
       <p>

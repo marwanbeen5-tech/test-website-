@@ -42,6 +42,11 @@ export default function Footer() {
                 Teste Grátis
               </Link>
             </li>
+            <li>
+              <Link href="/sobre" className="hover:text-fg">
+                Sobre Nós
+              </Link>
+            </li>
           </ul>
         </div>
         <div>
@@ -63,7 +68,7 @@ export default function Footer() {
               WhatsApp: {site.phoneDisplay}
             </a>
           </p>
-          <p className="mt-1 text-sm text-muted">{site.email}</p>
+          {site.email && <p className="mt-1 text-sm text-muted">{site.email}</p>}
         </div>
       </div>
       <p className="border-t border-border py-6 text-center text-xs text-muted">

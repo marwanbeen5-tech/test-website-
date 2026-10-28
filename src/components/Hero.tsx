@@ -68,7 +68,7 @@ function Pitch() {
 function AppMockup() {
   return (
     <div className="animate-fade-up relative mx-auto w-full max-w-xl py-6" style={{ animationDelay: "0.4s" }}>
-      <div className="bg-gradient-brand animate-blob absolute inset-6 rounded-[2rem] opacity-30 blur-3xl" />
+      <div className="bg-gradient-brand animate-blob absolute inset-6 hidden md:block rounded-[2rem] opacity-30 blur-3xl" />
 
       <div className="animate-float-slow relative overflow-hidden rounded-2xl border border-white/10 bg-neutral-950 text-white shadow-2xl shadow-black/50">
         {/* App top bar */}
@@ -160,7 +160,7 @@ function AppMockup() {
       {floatingBadges.map((b) => (
         <div
           key={b.text}
-          className={`animate-float absolute ${b.className} z-10 flex items-center gap-2 rounded-xl border border-border bg-surface/95 px-3 py-2 text-xs font-bold shadow-xl backdrop-blur`}
+          className={`animate-float absolute ${b.className} z-10 flex items-center gap-2 rounded-xl border border-border bg-surface/95 px-3 py-2 text-xs font-bold shadow-xl`}
           style={{ animationDelay: b.delay }}
         >
           <span className="bg-gradient-brand flex h-7 w-7 items-center justify-center rounded-lg">
@@ -177,9 +177,9 @@ export default function Hero() {
   return (
     <section className="relative -mt-20 overflow-hidden pt-20">
       <div className="bg-grid pointer-events-none absolute inset-0" />
-      <div className="animate-blob pointer-events-none absolute -top-40 left-1/4 h-[420px] w-[420px] rounded-full bg-brand/40 blur-[120px]" />
+      <div className="animate-blob pointer-events-none absolute hidden md:block -top-40 left-1/4 h-[420px] w-[420px] rounded-full bg-brand/40 blur-[120px]" />
       <div
-        className="animate-blob pointer-events-none absolute right-0 top-20 h-[380px] w-[380px] rounded-full bg-brand-2/30 blur-[120px]"
+        className="animate-blob pointer-events-none absolute hidden md:block right-0 top-20 h-[380px] w-[380px] rounded-full bg-brand-2/30 blur-[120px]"
         style={{ animationDelay: "-6s" }}
       />
 
@@ -199,14 +199,12 @@ export default function Hero() {
             O seu serviço de IPTV em Portugal
           </p>
           <h1
-            className="animate-fade-up mt-4 text-4xl font-extrabold leading-tight md:text-5xl xl:text-6xl"
-            style={{ animationDelay: "0.2s" }}
+            className="mt-4 text-4xl font-extrabold leading-tight md:text-5xl xl:text-6xl"
           >
             <span className="text-gradient">IPTV Portugal</span> Premium: Toda a Televisão num Só Lugar
           </h1>
           <p
-            className="animate-fade-up mx-auto mt-6 max-w-xl text-lg text-muted lg:mx-0"
-            style={{ animationDelay: "0.3s" }}
+            className="mx-auto mt-6 max-w-xl text-lg text-muted lg:mx-0"
           >
             Veja canais portugueses, desporto ao vivo e +45.000 canais de 115 países, mais 98.000 filmes e séries
             em 4K/UHD. Streaming sem cortes com tecnologia antifreeze, ativação em minutos e suporte 24/7 em

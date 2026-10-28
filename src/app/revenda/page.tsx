@@ -51,6 +51,41 @@ export default function RevendaPage() {
         <li>Os créditos não expiram</li>
         <li>Suporte prioritário 24/7</li>
       </ul>
+
+      <h2>Como funciona</h2>
+      <ol className="list-decimal space-y-2 pl-5">
+        <li>Escolha um pacote de créditos e fale connosco por WhatsApp para concluir a compra.</li>
+        <li>Recebe o acesso ao painel de revenda, normalmente no mesmo dia.</li>
+        <li>No painel cria contas para os seus clientes: cada crédito ativa 1 mês de serviço.</li>
+        <li>Define os seus próprios preços e fica com a diferença.</li>
+      </ol>
+
+      <h2>Quanto pode ganhar?</h2>
+      <p>
+        Com o pacote de 100 créditos, cada mês de serviço custa-lhe 2,70€. Se vender o mês a 10€, ganha 7,30€ por
+        cliente e por mês. São apenas exemplos: os seus resultados dependem dos preços que praticar e do número de
+        clientes que conseguir.
+      </p>
+
+      <h2>Para quem é</h2>
+      <p>
+        Para lojas de informática e eletrónica, técnicos que instalam boxes e TVs, e empreendedores que querem um
+        rendimento extra com um serviço que os clientes renovam todos os meses.
+      </p>
+
+      <h2>Perguntas frequentes</h2>
+      <div className="space-y-4">
+        {[
+          ["Preciso de experiência técnica?", "Não. O painel é simples e o nosso suporte ajuda-o a configurar as primeiras contas."],
+          ["Os créditos expiram?", "Não. Os créditos ficam disponíveis no painel até os usar."],
+          ["Posso dar testes aos meus clientes?", "Sim. Pode criar testes gratuitos a partir do painel antes de o cliente pagar."],
+        ].map(([q, a]) => (
+          <div key={q} className="rounded-2xl border border-border bg-surface p-5">
+            <h3 className="font-bold text-fg">{q}</h3>
+            <p className="mt-2">{a}</p>
+          </div>
+        ))}
+      </div>
     </PageShell>
   );
 }

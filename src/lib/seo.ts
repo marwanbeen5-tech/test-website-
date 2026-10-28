@@ -3,13 +3,24 @@ import { faqs, plans, site } from "./site";
 
 export const KEYWORD = "IPTV Portugal";
 
+// Share image for every page. A page's own `openGraph` replaces the inherited one,
+// image included, so it has to be repeated here.
+export const ogImage = { url: "/opengraph-image", width: 1200, height: 630, alt: `${KEYWORD} - ${site.name}` };
+
+// Google truncates titles beyond ~60 characters.
+const MAX_TITLE = 60;
+
 // Per-page metadata with canonical URL, so each page is indexed under its own address.
 export function pageMeta(path: string, title: string, description: string): Metadata {
+  const branded = `${title} | ${site.name}`;
+  const fits = branded.length <= MAX_TITLE;
   return {
-    title,
+    // Long titles drop the "| brand" suffix instead of being cut off.
+    title: fits ? title : { absolute: title },
     description,
-    alternates: { canonical: path, languages: { "pt-PT": path } },
-    openGraph: { title: `${title} | ${site.name}`, description, url: path },
+    alternates: { canonical: path, languages: { "pt-PT": path, "x-default": path } },
+    openGraph: { title: fits ? branded : title, description, url: path, images: [ogImage] },
+    twitter: { card: "summary_large_image", images: [ogImage.url] },
   };
 }
 
@@ -43,13 +54,14 @@ export function organizationLd() {
     "@type": "Organization",
     name: site.name,
     url: site.url,
-    email: site.email,
+    email: site.email || undefined,
     logo: `${site.url}/icon.svg`,
     areaServed: { "@type": "Country", name: "Portugal" },
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "customer support",
-      email: site.email,
+      email: site.email || undefined,
+      url: `${site.url}/contacto`,
       availableLanguage: ["Portuguese"],
       hoursAvailable: "Mo-Su 00:00-23:59",
     },

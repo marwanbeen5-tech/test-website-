@@ -4,7 +4,7 @@ import { breadcrumbLd, pageMeta } from "@/lib/seo";
 
 export const metadata = pageMeta(
   "/instalacao",
-  "Como Instalar IPTV Portugal: Smart TV, Android, Fire TV, iPhone",
+  "Como Instalar IPTV Portugal: Smart TV, Fire TV e iPhone",
   "Guia de instalação do IPTV Portugal em Smart TV Samsung e LG, Android TV, Fire TV Stick, iPhone, Windows e Mac. Configure em menos de 5 minutos."
 );
 

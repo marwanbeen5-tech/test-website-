@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { posts, site } from "@/lib/site";
+import { posts, site, SITE_UPDATED } from "@/lib/site";
 
 const pages: { path: string; priority: number }[] = [
   { path: "", priority: 1 },
@@ -7,6 +7,7 @@ const pages: { path: string; priority: number }[] = [
   { path: "/instalacao", priority: 0.8 },
   { path: "/blog", priority: 0.8 },
   { path: "/revenda", priority: 0.7 },
+  { path: "/sobre", priority: 0.6 },
   { path: "/contacto", priority: 0.6 },
   { path: "/termos", priority: 0.3 },
   { path: "/privacidade", priority: 0.3 },
@@ -14,7 +15,8 @@ const pages: { path: string; priority: number }[] = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date();
+  // A fixed date, not the build time: Google ignores lastmod that changes on every deploy.
+  const lastModified = SITE_UPDATED;
   return [
     ...pages.map(({ path, priority }) => ({
       url: `${site.url}${path}`,

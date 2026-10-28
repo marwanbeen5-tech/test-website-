@@ -13,9 +13,9 @@ export default function SucessoPage() {
       <p>
         Não recebeu nada após 30 minutos? Verifique a pasta de spam ou fale connosco por{" "}
         <a href={whatsappLink("Olá! Fiz uma compra e ainda não recebi as credenciais.")} className="underline">
-          WhatsApp
-        </a>{" "}
-        ou {site.email}.
+          WhatsApp ({site.phoneDisplay})
+        </a>
+        {site.email && ` ou ${site.email}`}.
       </p>
       <div className="flex flex-col gap-4 sm:flex-row">
         <Link href="/instalacao" className="bg-gradient-brand rounded-full px-8 py-3 text-center font-semibold">

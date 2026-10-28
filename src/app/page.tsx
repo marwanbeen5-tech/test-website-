@@ -6,19 +6,22 @@ import Devices from "@/components/Devices";
 import Pricing from "@/components/Pricing";
 import AboutIptv from "@/components/AboutIptv";
 import Comparison from "@/components/Comparison";
-import Testimonials from "@/components/Testimonials";
+import LatestPosts from "@/components/LatestPosts";
 import Faq from "@/components/Faq";
 import ResellerCta from "@/components/ResellerCta";
 import Reveal from "@/components/Reveal";
 import JsonLd from "@/components/JsonLd";
-import { faqLd, productLd } from "@/lib/seo";
+import { faqLd, ogImage, productLd } from "@/lib/seo";
 import { site } from "@/lib/site";
+
+const title = "IPTV Portugal | +45.000 Canais em 4K desde 4,75€/mês";
 
 export const metadata = {
   // `absolute` skips the "| <brand>" template so the keyword leads the title.
-  title: { absolute: "IPTV Portugal | +45.000 Canais em 4K desde 4,75€/mês" },
+  title: { absolute: title },
   description: site.description,
-  alternates: { canonical: "/", languages: { "pt-PT": "/" } },
+  alternates: { canonical: "/", languages: { "pt-PT": "/", "x-default": "/" } },
+  openGraph: { title, description: site.description, url: "/", images: [ogImage] },
 };
 
 export default function Home() {
@@ -36,7 +39,7 @@ export default function Home() {
       <Reveal>
         <Comparison />
       </Reveal>
-      <Testimonials />
+      <LatestPosts />
       <Faq />
       <ResellerCta />
     </>

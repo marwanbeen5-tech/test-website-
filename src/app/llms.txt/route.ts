@@ -1,4 +1,4 @@
-import { faqs, plans, posts, site } from "@/lib/site";
+import { faqs, plans, posts, site, supportContact } from "@/lib/site";
 
 // Plain-text summary for AI assistants (llms.txt convention).
 export function GET() {
@@ -15,7 +15,7 @@ ${site.name} é um serviço de IPTV Portugal: televisão pela internet com canai
 - Qualidade SD, HD, Full HD e 4K/UHD, guia EPG, sistema antifreeze
 - 1, 2 ou 3 ecrãs em simultâneo
 - Ativação em 5-30 minutos, teste grátis de 24 horas, reembolso em 7 dias
-- Suporte 24/7 em português por WhatsApp e email (${site.email})
+- Suporte 24/7 em português por ${supportContact()}
 
 ## Preços (1 ecrã)
 ${prices}

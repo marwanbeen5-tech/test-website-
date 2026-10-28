@@ -3,11 +3,14 @@
 export const site = {
   name: "Portugal IPTV",
   tagline: "IPTV Portugal",
+  // Kept under ~155 characters so Google shows it in full.
   description:
-    "IPTV Portugal com +45.000 canais ao vivo, canais portugueses, desporto e 98.000 filmes e séries em 4K/UHD. Desde 4,75€/mês, ativação em minutos, reembolso em 7 dias e suporte 24/7.",
+    "IPTV Portugal com +45.000 canais ao vivo, canais portugueses, desporto e 98.000 filmes e séries em 4K. Desde 4,75€/mês, teste grátis 24h e suporte 24/7.",
   // Vercel redirects the bare domain to www, so www is the canonical address.
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.portugaliptv.top",
-  email: "suporte@example.com",
+  // Support email shown on the site. Leave empty until a real inbox exists: the
+  // site then points customers to WhatsApp only.
+  email: "",
   // International format without "+" or spaces, used for wa.me links.
   whatsapp: "447882533020",
   phoneDisplay: "+44 7882 533020",
@@ -51,6 +54,14 @@ export const comparison = [
   { label: "Ativação em minutos", us: true, them: false },
 ];
 
+// Date the static pages last changed meaningfully (used as sitemap lastmod).
+export const SITE_UPDATED = "2026-10-28";
+
+// How customers reach support, for use inside sentences.
+export function supportContact() {
+  return site.email ? `${site.email} ou WhatsApp ${site.phoneDisplay}` : `WhatsApp ${site.phoneDisplay}`;
+}
+
 export function whatsappLink(message: string) {
   return `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(message)}`;
 }
@@ -80,10 +91,11 @@ export const features = [
 ] as const;
 
 export const stats = [
-  { value: "5+", label: "Anos de Negócio" },
-  { value: "17K+", label: "Canais ao Vivo" },
-  { value: "50K+", label: "Filmes e Séries" },
-  { value: "3K+", label: "Clientes Satisfeitos" },
+  // Service facts only (must match the figures used elsewhere on the site).
+  { value: "45K+", label: "Canais ao Vivo" },
+  { value: "98K+", label: "Filmes e Séries" },
+  { value: "115+", label: "Países" },
+  { value: "7", label: "Dias de Garantia" },
 ];
 
 export const planFeatures = [
@@ -133,21 +145,6 @@ export function findPlan(screens: number, index: number): Plan | undefined {
 export function screensLabel(n: number) {
   return `${n} ${n === 1 ? "Tela" : "Telas"}`;
 }
-
-export const testimonials = [
-  {
-    name: "Tânia Azevedo",
-    text: "Serviço incrível! A qualidade de imagem é fantástica e tenho acesso a todos os canais portugueses. A configuração foi super fácil e o suporte ajudou-me imediatamente.",
-  },
-  {
-    name: "Igor Santos",
-    text: "Mudei da TV por satélite e não podia estar mais satisfeito. A seleção de canais é incomparável e a qualidade 4K nos canais de desporto é excecional. Recomendo!",
-  },
-  {
-    name: "Fábio Fernandes",
-    text: "O melhor serviço de IPTV em Portugal. Sem congelamentos, sem buffering, apenas puro entretenimento. O plano família é ótimo - funciona perfeitamente nas nossas duas TVs.",
-  },
-];
 
 // Answers start with a direct, self-contained sentence so search engines and AI
 // assistants can quote them on their own.
