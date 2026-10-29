@@ -11,7 +11,7 @@ import Faq from "@/components/Faq";
 import ResellerCta from "@/components/ResellerCta";
 import Reveal from "@/components/Reveal";
 import JsonLd from "@/components/JsonLd";
-import { faqLd, ogImage, productLd } from "@/lib/seo";
+import { faqLd, ogImage, serviceLd } from "@/lib/seo";
 import { site } from "@/lib/site";
 
 const title = "IPTV Portugal | +45.000 Canais em 4K desde 4,75€/mês";
@@ -27,7 +27,7 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-      <JsonLd data={productLd()} />
+      <JsonLd data={serviceLd()} />
       <JsonLd data={faqLd()} />
       <Hero />
       <Pricing />

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { faqs, plans, site } from "./site";
+import { faqs, plans, screensLabel, site } from "./site";
 
 export const KEYWORD = "IPTV Portugal";
 
@@ -68,25 +68,31 @@ export function organizationLd() {
   };
 }
 
-// The subscription as a product with all plan prices, for price-aware results.
-export function productLd() {
-  const all = Object.values(plans).flat();
-  const prices = all.map((p) => p.price);
+// The subscription as a Service with every plan price. Not a Product: Google expects
+// Products to carry reviews/ratings, and only real customer reviews may be added.
+export function serviceLd() {
   return {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "Service",
     name: `Subscrição ${KEYWORD}`,
+    serviceType: "IPTV",
     description: site.description,
-    brand: { "@type": "Brand", name: site.name },
+    provider: { "@type": "Organization", name: site.name, url: site.url },
+    areaServed: { "@type": "Country", name: "Portugal" },
     image: `${site.url}/opengraph-image`,
-    offers: {
-      "@type": "AggregateOffer",
-      priceCurrency: "EUR",
-      lowPrice: Math.min(...prices),
-      highPrice: Math.max(...prices),
-      offerCount: all.length,
-      availability: "https://schema.org/InStock",
-      areaServed: { "@type": "Country", name: "Portugal" },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: `Planos ${KEYWORD}`,
+      itemListElement: Object.entries(plans).flatMap(([screens, list]) =>
+        list.map((p) => ({
+          "@type": "Offer",
+          name: `${p.duration} - ${screensLabel(Number(screens))}`,
+          price: p.price,
+          priceCurrency: "EUR",
+          availability: "https://schema.org/InStock",
+          url: `${site.url}/#planos`,
+        }))
+      ),
     },
   };
 }
