@@ -10,7 +10,7 @@ export const site = {
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.portugaliptv.top",
   // Support email shown on the site. Leave empty until a real inbox exists: the
   // site then points customers to WhatsApp only.
-  email: "",
+  email: "suporte@portugaliptv.top",
   // International format without "+" or spaces, used for wa.me links.
   whatsapp: "447882533020",
   phoneDisplay: "+44 7882 533020",
