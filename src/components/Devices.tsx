@@ -29,6 +29,12 @@ export default function Devices() {
           Veja os guias de instalação →
         </Link>
       </p>
+      <p className="mt-3 text-center text-sm text-muted">
+        Não sabe se a sua internet chega?{" "}
+        <Link href="/calculadora-velocidade-iptv" className="text-gradient font-semibold hover:underline">
+          Use a calculadora de velocidade IPTV →
+        </Link>
+      </p>
     </section>
   );
 }

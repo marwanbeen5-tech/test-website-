@@ -4,6 +4,7 @@ import { posts, site, SITE_UPDATED } from "@/lib/site";
 const pages: { path: string; priority: number }[] = [
   { path: "", priority: 1 },
   { path: "/teste-gratis", priority: 0.9 },
+  { path: "/calculadora-velocidade-iptv", priority: 0.8 },
   { path: "/instalacao", priority: 0.8 },
   { path: "/blog", priority: 0.8 },
   { path: "/revenda", priority: 0.7 },

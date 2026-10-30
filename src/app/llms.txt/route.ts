@@ -24,6 +24,7 @@ ${prices}
 - [Início e planos](${site.url}/)
 - [Teste grátis 24h](${site.url}/teste-gratis)
 - [Guia de instalação](${site.url}/instalacao)
+- [Calculadora de velocidade IPTV](${site.url}/calculadora-velocidade-iptv)
 - [Revenda](${site.url}/revenda)
 - [Contactos](${site.url}/contacto)
 ${posts.map((p) => `- [${p.title}](${site.url}/blog/${p.slug})`).join("\n")}

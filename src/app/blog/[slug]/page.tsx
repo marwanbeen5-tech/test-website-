@@ -19,7 +19,10 @@ export async function generateMetadata({ params }: Props) {
   const post = posts.find((p) => p.slug === slug);
   if (!post) return {};
   const meta = pageMeta(`/blog/${post.slug}`, post.title, post.excerpt);
-  return { ...meta, openGraph: { ...meta.openGraph, type: "article", publishedTime: post.date } };
+  return {
+    ...meta,
+    openGraph: { ...meta.openGraph, type: "article", publishedTime: post.date, modifiedTime: post.updated ?? post.date },
+  };
 }
 
 export default async function PostPage({ params }: Props) {
@@ -27,7 +30,13 @@ export default async function PostPage({ params }: Props) {
   const post = posts.find((p) => p.slug === slug);
   if (!post) notFound();
 
-  const headings = post.sections.flatMap((s) => (s.heading ? [s.heading] : []));
+  const faqHeading = "Perguntas frequentes";
+  const headings = [
+    ...post.sections.flatMap((s) => (s.heading ? [s.heading] : [])),
+    ...(post.faq?.length ? [faqHeading] : []),
+  ];
+  // Speed and buffering articles point readers to the calculator tool.
+  const showCalculator = ["melhor-velocidade-internet-4k", "iptv-buffering-solucoes"].includes(post.slug);
   // Same category first, then the newest others.
   const related = [
     ...posts.filter((p) => p.slug !== post.slug && p.category === post.category),
@@ -45,7 +54,7 @@ export default async function PostPage({ params }: Props) {
           keywords: post.keyword,
           articleSection: post.category,
           datePublished: post.date,
-          dateModified: post.date,
+          dateModified: post.updated ?? post.date,
           inLanguage: "pt-PT",
           author: { "@type": "Organization", name: site.name, url: site.url },
           publisher: { "@type": "Organization", name: site.name, logo: { "@type": "ImageObject", url: `${site.url}/icon.svg` } },
@@ -54,6 +63,19 @@ export default async function PostPage({ params }: Props) {
         }}
       />
       <JsonLd data={breadcrumbLd([{ name: "Blog", path: "/blog" }, { name: post.title, path: `/blog/${post.slug}` }])} />
+      {post.faq?.length ? (
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: post.faq.map((f) => ({
+              "@type": "Question",
+              name: f.q,
+              acceptedAnswer: { "@type": "Answer", text: f.a },
+            })),
+          }}
+        />
+      ) : null}
 
       <nav aria-label="Breadcrumb" className="-mt-4 text-sm">
         <Link href="/" className="hover:text-fg">Início</Link> /{" "}
@@ -68,6 +90,11 @@ export default async function PostPage({ params }: Props) {
         <span>
           Por {site.name} · <time dateTime={post.date}>{formatDate(post.date)}</time>
         </span>
+        {post.updated && post.updated !== post.date && (
+          <span>
+            Atualizado em <time dateTime={post.updated}>{formatDate(post.updated)}</time>
+          </span>
+        )}
       </div>
 
       <div className="overflow-hidden rounded-2xl">
@@ -115,7 +142,36 @@ export default async function PostPage({ params }: Props) {
             )}
           </section>
         ))}
+
+        {post.faq?.length ? (
+          <section className="space-y-4">
+            <h2 id={headingId(faqHeading)} className="scroll-mt-24">
+              {faqHeading}
+            </h2>
+            {post.faq.map((f) => (
+              <div key={f.q} className="rounded-2xl border border-border bg-surface p-5">
+                <h3 className="font-bold text-fg">{f.q}</h3>
+                <p className="mt-2">{f.a}</p>
+              </div>
+            ))}
+          </section>
+        ) : null}
       </article>
+
+      {showCalculator && (
+        <Link
+          href="/calculadora-velocidade-iptv"
+          className="spotlight flex items-center gap-4 rounded-2xl border border-border bg-surface p-6"
+        >
+          <span className="bg-gradient-brand flex h-12 w-12 shrink-0 items-center justify-center rounded-xl">
+            <Icon name="bolt" />
+          </span>
+          <span>
+            <span className="block font-bold text-fg">Calculadora de velocidade IPTV →</span>
+            <span className="block text-sm">Descubra em segundos que velocidade de internet a sua casa precisa.</span>
+          </span>
+        </Link>
+      )}
 
       <div className="bg-animated relative overflow-hidden rounded-2xl p-8 text-white">
         <p className="text-2xl font-extrabold">Experimente o nosso IPTV Portugal</p>

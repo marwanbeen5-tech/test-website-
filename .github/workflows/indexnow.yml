@@ -1,0 +1,21 @@
+# After each push to main, wait for Vercel to deploy, then tell IndexNow (Bing and
+# the AI assistants that use Bing's index) about every page in the sitemap.
+name: IndexNow
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Wait for the Vercel deployment
+        run: sleep 180
+      - name: Submit sitemap URLs to IndexNow
+        run: node scripts/indexnow.mjs
