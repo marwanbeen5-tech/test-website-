@@ -154,7 +154,7 @@ export const posts: Post[] = [
     slug: "iptv-futebol-sem-cortes",
     title: "IPTV para ver futebol: como ver jogos em direto sem cortes",
     excerpt:
-      "Tudo o que precisa para ver futebol em IPTV sem cortes: internet, dispositivo, configuração da aplicação, o atraso em relação à TV e uma checklist para o dia de jogo.",
+      "Como ver futebol em IPTV sem cortes: a internet certa, o melhor dispositivo, a configuração da aplicação e uma checklist para o dia de jogo.",
     keyword: "IPTV futebol",
     category: "Dicas",
     date: "2026-10-30",
@@ -402,7 +402,7 @@ export const posts: Post[] = [
     slug: "iptv-vs-netflix-streaming",
     title: "IPTV vs Netflix e outros streamings: qual a diferença?",
     excerpt:
-      "IPTV e Netflix não são a mesma coisa. Comparamos TV em direto, conteúdos on-demand, preço, dispositivos e qualidade, e explicamos qual escolher para cada perfil.",
+      "IPTV ou Netflix? Comparamos TV em direto, filmes a pedido, preço, dispositivos e qualidade, e dizemos qual escolher para cada perfil.",
     keyword: "IPTV vs Netflix",
     category: "Comparações",
     date: "2026-10-28",
@@ -525,7 +525,7 @@ export const posts: Post[] = [
     slug: "ver-iptv-telemovel-tablet",
     title: "Como ver IPTV no telemóvel e tablet (Android e iPhone)",
     excerpt:
-      "Guia para ver IPTV no telemóvel e tablet Android, iPhone e iPad: que aplicação instalar, como configurar, enviar para a TV com Chromecast ou AirPlay e poupar dados móveis.",
+      "Como ver IPTV no telemóvel e tablet Android, iPhone e iPad: que aplicação instalar, como configurar, Chromecast, AirPlay e poupar dados.",
     keyword: "IPTV telemóvel",
     category: "Instalação",
     date: "2026-10-27",
@@ -811,7 +811,7 @@ export const posts: Post[] = [
     slug: "como-instalar-iptv-smart-tv",
     title: "Como instalar IPTV numa Smart TV Samsung ou LG (guia 2026)",
     excerpt:
-      "Guia passo a passo para instalar IPTV numa Smart TV Samsung (Tizen) ou LG (webOS): que aplicação usar, como adicionar a lista e como resolver os problemas mais comuns.",
+      "Como instalar IPTV numa Smart TV Samsung ou LG: que aplicação usar, como adicionar a lista e como resolver os problemas mais comuns.",
     keyword: "instalar IPTV Smart TV",
     category: "Instalação",
     date: "2026-10-15",
@@ -1079,7 +1079,7 @@ export const posts: Post[] = [
     slug: "melhores-aplicacoes-iptv",
     title: "Melhores aplicações IPTV em 2026: Smart TV, Android e iPhone",
     excerpt:
-      "Comparámos as aplicações IPTV mais usadas em Portugal: IPTV Smarters Pro, TiviMate, IBO Player, GSE Smart IPTV, VLC e Kodi. Vantagens, desvantagens e qual escolher para cada dispositivo.",
+      "Comparámos IPTV Smarters Pro, TiviMate, IBO Player, GSE Smart IPTV, VLC e Kodi: vantagens, limites e qual escolher para cada dispositivo.",
     keyword: "melhores apps IPTV",
     category: "Guias",
     date: "2026-09-30",
@@ -1361,7 +1361,7 @@ export const posts: Post[] = [
     slug: "melhor-velocidade-internet-4k",
     title: "Que velocidade de internet preciso para IPTV em 4K?",
     excerpt:
-      "A velocidade recomendada para ver IPTV em SD, HD, Full HD e 4K, quanto precisa para vários ecrãs, o que funciona com fibra, ADSL e 4G/5G em Portugal e como testar corretamente.",
+      "A velocidade certa para ver IPTV em HD, Full HD e 4K, quanto precisa para vários ecrãs e o que funciona com fibra, ADSL e 4G/5G.",
     keyword: "velocidade internet IPTV",
     category: "Dicas",
     date: "2026-09-15",
