@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Icon from "./Icon";
-import { site } from "@/lib/site";
+import { site, trialWhatsapp } from "@/lib/site";
 
 const tabs = ["Ao Vivo", "Filmes", "Séries", "Desporto"];
 
@@ -217,12 +217,14 @@ export default function Hero() {
             <Link href="#planos" className="bg-gradient-brand btn-shine btn-glow rounded-full px-8 py-3 font-semibold">
               Começar Agora
             </Link>
-            <Link
-              href="/teste-gratis"
+            <a
+              href={trialWhatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-full border border-border px-8 py-3 font-semibold transition hover:-translate-y-0.5 hover:border-brand hover:bg-surface"
             >
               Teste Grátis 24h
-            </Link>
+            </a>
           </div>
           <div
             className="animate-fade-up mt-10 flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm text-muted lg:justify-start"

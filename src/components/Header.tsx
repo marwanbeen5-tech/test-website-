@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import Icon from "./Icon";
 import Logo from "./Logo";
 import ThemeToggle from "./ThemeToggle";
-import { nav } from "@/lib/site";
+import { nav, trialWhatsapp } from "@/lib/site";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -70,12 +70,14 @@ export default function Header() {
 
         <div className="hidden items-center gap-3 lg:flex">
           <ThemeToggle />
-          <Link
-            href="/teste-gratis"
+          <a
+            href={trialWhatsapp}
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-full border border-border px-5 py-2 text-sm font-semibold transition hover:border-brand hover:bg-surface"
           >
             Teste Grátis
-          </Link>
+          </a>
           <Link
             href="/#planos"
             className="bg-gradient-brand btn-shine btn-glow rounded-full px-5 py-2 text-sm font-semibold"
@@ -104,13 +106,15 @@ export default function Header() {
               {item.label}
             </Link>
           ))}
-          <Link
-            href="/teste-gratis"
+          <a
+            href={trialWhatsapp}
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setOpen(false)}
             className="rounded-full border border-border px-5 py-2 text-center font-semibold"
           >
             Teste Grátis
-          </Link>
+          </a>
           <Link
             href="/#planos"
             onClick={() => setOpen(false)}

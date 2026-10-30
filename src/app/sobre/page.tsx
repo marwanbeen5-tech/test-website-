@@ -3,7 +3,7 @@ import Icon from "@/components/Icon";
 import JsonLd from "@/components/JsonLd";
 import PageShell from "@/components/PageShell";
 import { breadcrumbLd, pageMeta } from "@/lib/seo";
-import { site, supportContact } from "@/lib/site";
+import { site, supportContact, trialWhatsapp } from "@/lib/site";
 
 export const metadata = pageMeta(
   "/sobre",
@@ -52,7 +52,7 @@ export default function SobrePage() {
         Tem dúvidas antes de comprar? Fale connosco por {supportContact()} ou visite a página de{" "}
         <Link href="/contacto" className="underline">contactos</Link>. Para começar, veja os{" "}
         <Link href="/#planos" className="underline">planos</Link> ou peça um{" "}
-        <Link href="/teste-gratis" className="underline">teste grátis</Link>.
+        <a href={trialWhatsapp} target="_blank" rel="noopener noreferrer" className="underline">teste grátis</a>.
       </p>
     </PageShell>
   );

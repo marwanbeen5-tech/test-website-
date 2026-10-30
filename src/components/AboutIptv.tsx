@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Reveal from "./Reveal";
-import { site } from "@/lib/site";
+import { site, trialWhatsapp } from "@/lib/site";
 
 // Short facts in a table: easy for Google and AI assistants to extract and quote.
 const facts = [
@@ -44,9 +44,9 @@ export default function AboutIptv() {
             </ul>
             <p>
               Quer experimentar primeiro?{" "}
-              <Link href="/teste-gratis" className="text-gradient font-semibold hover:underline">
+              <a href={trialWhatsapp} target="_blank" rel="noopener noreferrer" className="text-gradient font-semibold hover:underline">
                 Peça o seu teste grátis de 24 horas
-              </Link>{" "}
+              </a>{" "}
               ou leia o nosso{" "}
               <Link href="/blog/melhor-iptv-portugal" className="text-gradient font-semibold hover:underline">
                 guia do melhor IPTV Portugal

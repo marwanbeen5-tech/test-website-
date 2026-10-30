@@ -6,7 +6,7 @@ import PageShell from "@/components/PageShell";
 import PostCover from "@/components/PostCover";
 import { breadcrumbLd, pageMeta } from "@/lib/seo";
 import { formatDate, headingId, posts, readingTime } from "@/lib/posts";
-import { site } from "@/lib/site";
+import { site, trialWhatsapp } from "@/lib/site";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -124,9 +124,9 @@ export default async function PostPage({ params }: Props) {
           <Link href="/#planos" className="btn-shine rounded-full bg-white px-6 py-2.5 text-center font-semibold text-black">
             Ver Planos
           </Link>
-          <Link href="/teste-gratis" className="rounded-full border border-white/50 px-6 py-2.5 text-center font-semibold">
+          <a href={trialWhatsapp} target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/50 px-6 py-2.5 text-center font-semibold">
             Teste Grátis 24h
-          </Link>
+          </a>
         </div>
       </div>
 

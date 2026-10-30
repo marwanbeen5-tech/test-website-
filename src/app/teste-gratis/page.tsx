@@ -4,6 +4,7 @@ import JsonLd from "@/components/JsonLd";
 import LeadForm from "@/components/LeadForm";
 import PageShell from "@/components/PageShell";
 import { breadcrumbLd, pageMeta } from "@/lib/seo";
+import { trialWhatsapp } from "@/lib/site";
 
 export const metadata = pageMeta(
   "/teste-gratis",
@@ -52,6 +53,19 @@ export default function TesteGratisPage() {
       intro="Experimente todos os canais e filmes durante 24 horas, sem compromisso e sem cartão de crédito. A melhor forma de confirmar a qualidade na sua internet e no seu dispositivo."
     >
       <JsonLd data={breadcrumbLd([{ name: "Teste Grátis", path: "/teste-gratis" }])} />
+      <div className="rounded-2xl border border-border bg-surface p-8 text-center">
+        <p className="text-lg font-bold text-fg">A forma mais rápida: peça o teste pelo WhatsApp</p>
+        <p className="mt-2">Envie-nos uma mensagem e recebe os dados de acesso em poucos minutos.</p>
+        <a
+          href={trialWhatsapp}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-shine btn-glow mt-6 inline-flex items-center gap-2 rounded-full bg-[#25d366] px-8 py-3 font-semibold text-white"
+        >
+          Pedir Teste Grátis no WhatsApp
+        </a>
+      </div>
+      <p className="text-center">Prefere o email? Preencha o formulário abaixo.</p>
       <LeadForm type="trial" />
 
       <h2>Como funciona o teste</h2>

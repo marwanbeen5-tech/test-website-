@@ -2,7 +2,7 @@ import Link from "next/link";
 import Logo from "./Logo";
 import Icon from "./Icon";
 import { CookieSettingsButton } from "./CookieBanner";
-import { legalLinks, nav, site, whatsappLink } from "@/lib/site";
+import { legalLinks, nav, site, whatsappLink, trialWhatsapp } from "@/lib/site";
 
 const paymentMethods = ["Visa", "Mastercard", "PayPal", "MB WAY", "Multibanco", "Apple Pay"];
 
@@ -38,9 +38,9 @@ export default function Footer() {
               </li>
             ))}
             <li>
-              <Link href="/teste-gratis" className="hover:text-fg">
+              <a href={trialWhatsapp} target="_blank" rel="noopener noreferrer" className="hover:text-fg">
                 Teste Grátis
-              </Link>
+              </a>
             </li>
             <li>
               <Link href="/sobre" className="hover:text-fg">

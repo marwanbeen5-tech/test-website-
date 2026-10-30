@@ -66,6 +66,9 @@ export function whatsappLink(message: string) {
   return `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(message)}`;
 }
 
+// Every "Teste Grátis" button opens WhatsApp with this message.
+export const trialWhatsapp = whatsappLink("Olá! Quero pedir o teste grátis de 24 horas.");
+
 export const steps = [
   {
     title: "Faça o Seu Pedido",
