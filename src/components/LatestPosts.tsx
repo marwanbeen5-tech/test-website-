@@ -14,7 +14,7 @@ export default function LatestPosts() {
         text="Guias práticos para escolher, instalar e ver IPTV em Portugal sem complicações."
       />
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        {posts.map((p, i) => (
+        {posts.slice(0, 8).map((p, i) => (
           <Reveal key={p.slug} delay={(i % 4) * 80}>
             <Link
               href={`/blog/${p.slug}`}

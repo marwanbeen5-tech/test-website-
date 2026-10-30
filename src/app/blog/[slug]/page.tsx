@@ -36,7 +36,7 @@ export default async function PostPage({ params }: Props) {
     ...(post.faq?.length ? [faqHeading] : []),
   ];
   // Speed and buffering articles point readers to the calculator tool.
-  const showCalculator = ["melhor-velocidade-internet-4k", "iptv-buffering-solucoes"].includes(post.slug);
+  const showCalculator = ["melhor-velocidade-internet-4k", "iptv-buffering-solucoes", "iptv-futebol-sem-cortes"].includes(post.slug);
   // Same category first, then the newest others.
   const related = [
     ...posts.filter((p) => p.slug !== post.slug && p.category === post.category),
@@ -117,6 +117,19 @@ export default async function PostPage({ params }: Props) {
       )}
 
       <article className="space-y-8 text-base">
+        {post.summary?.length ? (
+          <aside aria-label="Resumo rápido" className="rounded-2xl border border-brand/40 bg-brand/5 p-6">
+            <p className="font-bold text-fg">Resumo rápido</p>
+            <ul className="mt-3 space-y-2">
+              {post.summary.map((item) => (
+                <li key={item} className="flex gap-3">
+                  <Icon name="check" className="mt-1 h-4 w-4 shrink-0 text-brand-2" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </aside>
+        ) : null}
         {post.sections.map((s, i) => (
           <section key={i} className="space-y-4">
             {s.heading && (

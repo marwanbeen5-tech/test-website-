@@ -10,6 +10,8 @@ export type Post = {
   date: string;
   // Last meaningful update (shown as "Atualizado em", used as dateModified).
   updated?: string;
+  // Key takeaways shown in a box at the top (short, quotable lines for AI answers).
+  summary?: string[];
   // Questions answered at the end of the article (also emitted as FAQPage data).
   faq?: { q: string; a: string }[];
   // Each section: an optional h2 heading followed by paragraphs and an optional list.
@@ -25,6 +27,13 @@ export const posts: Post[] = [
     keyword: "melhor IPTV Portugal",
     category: "Guias",
     date: "2026-10-28",
+    summary: [
+      "O melhor IPTV Portugal é estável nos canais que vê, sobretudo em jogos à noite.",
+      "Confirme canais portugueses, qualidade até 4K e guia de programação (EPG).",
+      "Prefira serviços com teste grátis, suporte em português e reembolso.",
+      "Desconfie de preços muito abaixo da média do mercado.",
+      "Teste sempre à noite, quando a rede está mais carregada.",
+    ],
     sections: [
       {
         paragraphs: [
@@ -96,6 +105,29 @@ export const posts: Post[] = [
         ],
       },
       {
+        heading: "O que esperar depois de comprar",
+        paragraphs: [
+          "Num bom serviço, recebe os dados de acesso por email poucos minutos depois do pagamento, juntamente com instruções para o seu dispositivo. Se precisar, o suporte acompanha a instalação pelo WhatsApp. Durante os primeiros dias, vale a pena criar uma lista de favoritos e ajustar o guia de programação: a experiência fica muito mais cómoda e parecida com a da TV por cabo.",
+        ],
+      },
+      {
+        heading: "Plano mensal ou anual?",
+        paragraphs: [
+          "Comece com um teste ou com um plano curto para confirmar a qualidade na sua casa. Quando estiver satisfeito, os planos anuais saem muito mais baratos por mês. No nosso serviço, o plano de 12 meses custa cerca de um terço do preço de pagar mês a mês.",
+        ],
+      },
+      {
+        heading: "Perguntas a fazer antes de comprar",
+        paragraphs: [],
+        list: [
+          "Posso testar antes de pagar, e durante quanto tempo?",
+          "Quantos ecrãs posso usar ao mesmo tempo?",
+          "Que aplicações recomendam para o meu dispositivo?",
+          "Como funciona o reembolso se não ficar satisfeito?",
+          "Como e quando posso falar com o suporte?",
+        ],
+      },
+      {
         heading: "Conclusão",
         paragraphs: [
           "O melhor IPTV Portugal não é o que tem mais canais, mas o que funciona sem cortes nos canais que vê, tem bom suporte e deixa-o testar antes de pagar. Use os critérios deste guia, faça o teste à noite e decida com base no que viu, não no que foi prometido.",
@@ -119,6 +151,518 @@ export const posts: Post[] = [
     ],
   },
   {
+    slug: "iptv-futebol-sem-cortes",
+    title: "IPTV para ver futebol: como ver jogos em direto sem cortes",
+    excerpt:
+      "Tudo o que precisa para ver futebol em IPTV sem cortes: internet, dispositivo, configuração da aplicação, o atraso em relação à TV e uma checklist para o dia de jogo.",
+    keyword: "IPTV futebol",
+    category: "Dicas",
+    date: "2026-10-30",
+    summary: [
+      "Precisa de 15 Mbps estáveis por ecrã em Full HD e 25 Mbps em 4K.",
+      "Ligue o dispositivo por cabo de rede: resolve a maioria dos cortes.",
+      "Um Fire TV Stick 4K Max com o TiviMate dá a imagem mais fluida.",
+      "O atraso de alguns segundos em relação à TV é normal no IPTV.",
+      "Reinicie o router e pause downloads meia hora antes do jogo.",
+    ],
+    sections: [
+      {
+        paragraphs: [
+          "Para ver futebol em IPTV sem cortes precisa de três coisas: uma internet estável de pelo menos 15 Mbps por ecrã (25 Mbps para 4K), um dispositivo ligado por cabo de rede e uma aplicação bem configurada. Com isto, a experiência num jogo em direto é igual ou melhor do que na TV por cabo.",
+          "O futebol é o teste mais exigente para qualquer serviço de IPTV: milhares de pessoas ligam-se ao mesmo tempo, à mesma hora, e qualquer corte acontece no pior momento. Neste guia explicamos como preparar a sua casa para não perder nenhum lance.",
+        ],
+      },
+      {
+        heading: "O que precisa para ver futebol em IPTV",
+        paragraphs: [],
+        list: [
+          "Internet estável: 15 Mbps por ecrã em Full HD, 25 Mbps em 4K, medidos à hora do jogo.",
+          "Ligação por cabo de rede, ou Wi-Fi de 5 GHz com bom sinal.",
+          "Um dispositivo rápido: Fire TV Stick 4K Max, box Android recente ou Smart TV com Android TV.",
+          "Uma aplicação com bom leitor, como o TiviMate ou o IPTV Smarters Pro.",
+          "Um serviço com servidores estáveis e tecnologia antifreeze.",
+        ],
+      },
+      {
+        heading: "A internet certa para jogos em direto",
+        paragraphs: [
+          "Nos jogos grandes, a internet de toda a vizinhança está mais carregada. Por isso, a velocidade que conta é a que tem à hora do jogo, e não a que mede numa terça-feira de manhã. Faça um teste de velocidade no próprio dispositivo num dia de jogo e use esse valor como referência.",
+          "Se a internet estiver no limite, prefira a versão Full HD do canal à 4K. Num televisor médio a diferença de imagem é pequena, e a estabilidade melhora muito. A nossa calculadora de velocidade IPTV ajuda a saber quanto precisa quando há vários ecrãs ligados.",
+        ],
+      },
+      {
+        heading: "O melhor dispositivo para desporto",
+        paragraphs: [
+          "No desporto, a fluidez da imagem e a rapidez a trocar de canal fazem diferença. Os dispositivos Android (Fire TV Stick 4K Max, boxes Android TV, televisões com Google TV) têm as melhores aplicações e processadores mais rápidos do que muitas Smart TV. Smart TV mais antigas podem mostrar pequenos saltos nos movimentos rápidos da bola.",
+          "Ligue sempre o dispositivo por cabo quando possível. No Fire TV Stick, um adaptador Ethernet custa pouco e resolve a maioria dos cortes.",
+        ],
+      },
+      {
+        heading: "Configure a aplicação para desporto",
+        paragraphs: [],
+        list: [
+          "Crie um grupo de favoritos só com os canais de desporto que segue.",
+          "Use o guia de programação (EPG) para marcar lembretes antes dos jogos.",
+          "No TiviMate, aumente o tamanho do buffer nas definições do leitor: aguenta melhor pequenas quebras da internet.",
+          "Ative a opção de reconectar automaticamente se a ligação cair, quando a aplicação a tiver.",
+          "Se o canal tiver catch-up, pode rever o jogo ou os golos mais tarde.",
+        ],
+      },
+      {
+        heading: "Porque é que o IPTV tem atraso em relação à TV",
+        paragraphs: [
+          "Qualquer transmissão pela internet chega com alguns segundos de atraso em relação ao sinal de antena ou satélite: o vídeo tem de ser codificado, enviado e guardado em memória antes de aparecer no ecrã. No IPTV este atraso costuma ficar entre alguns segundos e cerca de um minuto, conforme o canal e o buffer da aplicação.",
+          "Na prática, a única coisa que muda é que o vizinho pode gritar golo antes de si. Para evitar spoilers, desligue as notificações de resultados no telemóvel durante o jogo.",
+        ],
+      },
+      {
+        heading: "Ver vários jogos ao mesmo tempo",
+        paragraphs: [
+          "Em jornadas com vários jogos à mesma hora, pode ver um jogo na sala e outro no quarto com um plano de 2 ou 3 ecrãs. Some a velocidade de cada ecrã para confirmar que a internet chega. Algumas aplicações, como o TiviMate Premium, permitem ainda ver vários canais no mesmo ecrã em simultâneo, com a velocidade correspondente a cada um.",
+        ],
+      },
+      {
+        heading: "Dia de jogo: checklist 30 minutos antes",
+        paragraphs: [],
+        list: [
+          "Reinicie o router e o dispositivo.",
+          "Pause downloads, atualizações de consolas e backups na nuvem.",
+          "Abra o canal com antecedência e confirme que a imagem está estável.",
+          "Tenha a versão Full HD do canal como plano B, caso a 4K hesite.",
+          "Desligue as notificações de resultados no telemóvel.",
+        ],
+      },
+      {
+        heading: "Se a imagem parar a meio do jogo",
+        paragraphs: [],
+        list: [
+          "Mude para outra versão do mesmo canal (Full HD ou HD).",
+          "Saia do canal e volte a entrar: muitas vezes basta para recuperar a ligação.",
+          "Verifique se alguém em casa começou um download ou uma videochamada.",
+          "Se acontecer em todos os canais, fale connosco pelo WhatsApp para verificarmos os servidores.",
+        ],
+      },
+      {
+        heading: "Som e imagem: ajustes para os jogos",
+        paragraphs: [
+          "Para uma experiência de estádio, ligue a televisão a uma barra de som e escolha o modo de som Desporto ou Estádio, quando existir. Na imagem, o modo Desporto da televisão realça o relvado e torna a bola mais fácil de seguir. Se notar saltos nos movimentos rápidos, reduza a suavização de movimento: em alguns televisores, o processamento excessivo cria um efeito artificial.",
+        ],
+      },
+      {
+        heading: "Conclusão",
+        paragraphs: [
+          "Ver futebol em IPTV sem cortes depende mais da preparação do que da sorte: internet estável, dispositivo por cabo e uma aplicação bem configurada. Antes de subscrever, peça um teste grátis e experimente-o num dia de jogo, à noite. É a melhor forma de saber se o serviço aguenta quando mais importa.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "Que velocidade preciso para ver futebol em IPTV?",
+        a: "Cerca de 15 Mbps estáveis por ecrã em Full HD e 25 Mbps em 4K, medidos à hora do jogo, quando a internet está mais carregada.",
+      },
+      {
+        q: "Porque é que o futebol no IPTV está atrasado?",
+        a: "As transmissões pela internet chegam com alguns segundos de atraso em relação à antena ou ao satélite, por causa da codificação e do buffer. É normal e não afeta a qualidade.",
+      },
+      {
+        q: "Qual é o melhor dispositivo para ver futebol em IPTV?",
+        a: "Um Fire TV Stick 4K Max ou uma box Android TV ligados por cabo de rede, com a aplicação TiviMate, oferecem a imagem mais fluida.",
+      },
+    ],
+  },
+  {
+    slug: "iptv-smart-tv-hisense-tcl-philips",
+    title: "IPTV numa Smart TV Hisense, TCL, Philips ou Sony",
+    excerpt:
+      "Como instalar IPTV em televisões Hisense, TCL, Philips e Sony: descubra o sistema da sua TV, que aplicação usar e quando compensa usar um Fire TV Stick.",
+    keyword: "IPTV Smart TV Hisense TCL",
+    category: "Instalação",
+    date: "2026-10-29",
+    summary: [
+      "Tudo depende do sistema da televisão: Google TV, Android TV, VIDAA ou outro.",
+      "Com Google TV ou Android TV, instala o TiviMate ou o IPTV Smarters pela Play Store.",
+      "Nas Hisense com VIDAA as aplicações são limitadas.",
+      "Um Fire TV Stick resolve qualquer televisão com porta HDMI.",
+      "Ligue a televisão por cabo de rede para uma imagem mais estável.",
+    ],
+    sections: [
+      {
+        paragraphs: [
+          "Instalar IPTV numa Smart TV Hisense, TCL, Philips ou Sony depende do sistema da televisão: se tiver Android TV ou Google TV, basta instalar uma aplicação IPTV a partir da Google Play Store; se tiver um sistema próprio, como o VIDAA da Hisense, as opções são mais limitadas e um Fire TV Stick é muitas vezes a solução mais simples.",
+          "Neste guia explicamos como saber que sistema tem a sua televisão e os passos para cada caso.",
+        ],
+      },
+      {
+        heading: "Como saber que sistema tem a sua televisão",
+        paragraphs: [
+          "A mesma marca pode usar sistemas diferentes conforme o modelo e o ano. Para confirmar, abra as Definições da televisão e procure Sobre, Informação do sistema ou Acerca. Também pode olhar para o ecrã inicial: se tiver a Google Play Store ou o logótipo Google TV, a sua TV usa o sistema da Google.",
+        ],
+        list: [
+          "Sony: Google TV ou Android TV na grande maioria dos modelos.",
+          "TCL: Google TV ou Android TV na maioria dos modelos vendidos em Portugal.",
+          "Philips: Google TV ou Android TV em muitos modelos; alguns modelos mais acessíveis usam outros sistemas, como o Titan OS.",
+          "Hisense: a maioria usa o sistema próprio VIDAA; alguns modelos têm Google TV.",
+        ],
+      },
+      {
+        heading: "Televisões com Android TV ou Google TV: o caso mais fácil",
+        paragraphs: [
+          "Se a sua televisão tem Google TV ou Android TV, tem acesso às mesmas aplicações de um Fire TV Stick ou de uma box Android, incluindo o TiviMate e o IPTV Smarters Pro. É a melhor situação possível: não precisa de nenhum aparelho extra.",
+        ],
+      },
+      {
+        heading: "Instalar a aplicação passo a passo (Google TV e Android TV)",
+        paragraphs: [],
+        list: [
+          "No ecrã inicial, abra a Google Play Store (no Google TV, use Pesquisar e escreva o nome da aplicação).",
+          "Procure TiviMate ou IPTV Smarters Pro e escolha Instalar.",
+          "Abra a aplicação e escolha adicionar lista com Xtream Codes.",
+          "Introduza o URL do servidor, o utilizador e a palavra-passe que recebeu por email.",
+          "Aguarde o carregamento dos canais e do guia de programação, e crie a sua lista de favoritos.",
+        ],
+      },
+      {
+        heading: "Hisense com VIDAA",
+        paragraphs: [
+          "O VIDAA tem uma loja de aplicações mais pequena. Em alguns modelos e países é possível encontrar leitores IPTV na VIDAA Store, mas a oferta muda com frequência e as aplicações costumam ser mais limitadas do que no Android.",
+          "Se não encontrar uma aplicação na loja, ou se a troca de canais for lenta, a solução mais fiável é ligar um Fire TV Stick à porta HDMI da televisão. Fica com as melhores aplicações e a televisão continua a servir de ecrã, com a mesma qualidade de imagem.",
+        ],
+      },
+      {
+        heading: "Philips com Titan OS ou outros sistemas",
+        paragraphs: [
+          "Nos modelos Philips que não usam Google TV, as lojas de aplicações têm poucas opções para IPTV. Tal como na Hisense, um Fire TV Stick ou uma box Android é a forma mais simples de ter uma experiência completa, com guia de programação e troca rápida de canais.",
+        ],
+      },
+      {
+        heading: "Quando compensa usar um Fire TV Stick",
+        paragraphs: [
+          "Mesmo com uma Smart TV, um Fire TV Stick compensa quando:",
+        ],
+        list: [
+          "A loja da televisão não tem uma boa aplicação IPTV.",
+          "A televisão demora a trocar de canal ou bloqueia com frequência.",
+          "Quer usar o TiviMate, que só existe para Android TV e Fire TV.",
+          "Quer levar o IPTV consigo para outra casa ou em viagem.",
+        ],
+      },
+      {
+        heading: "Ajustes de imagem para desporto e filmes",
+        paragraphs: [
+          "Muitas televisões vêm com o modo de imagem Vívido ou Dinâmico ativo, que exagera as cores. Para filmes, escolha o modo Cinema ou Filme. Para desporto, o modo Desporto ou um nível baixo de suavização de movimento ajudam nas jogadas rápidas. Experimente durante um jogo e ajuste a gosto.",
+        ],
+      },
+      {
+        heading: "Aplicações IPTV recomendadas por sistema",
+        paragraphs: [],
+        list: [
+          "Google TV e Android TV: TiviMate (a melhor experiência de TV ao vivo) ou IPTV Smarters Pro (gratuita).",
+          "VIDAA (Hisense): leitores disponíveis na VIDAA Store do seu modelo, ou um Fire TV Stick.",
+          "Titan OS e outros sistemas: Fire TV Stick ou box Android.",
+          "Em qualquer caso, configure com Xtream Codes para ter guia de programação e categorias automáticas.",
+        ],
+      },
+      {
+        heading: "Problemas comuns nestas televisões",
+        paragraphs: [],
+        list: [
+          "A aplicação fecha ao abrir canais 4K: a televisão pode não ter memória suficiente; use a versão Full HD do canal ou um Fire TV Stick 4K Max.",
+          "O Wi-Fi da televisão é fraco: muitas TV têm antenas Wi-Fi limitadas. Ligue por cabo de rede sempre que possível.",
+          "A Play Store não aparece: confirme em Definições que tem sessão iniciada com uma conta Google.",
+          "A imagem fica escura ou com cores estranhas: reponha o modo de imagem padrão e desative o modo de poupança de energia.",
+        ],
+      },
+      {
+        heading: "Conclusão",
+        paragraphs: [
+          "Com Google TV ou Android TV, a instalação demora poucos minutos e não precisa de nada extra. Com VIDAA ou outros sistemas, um Fire TV Stick resolve o problema de forma simples e barata. Se tiver dúvidas sobre o seu modelo, envie-nos uma mensagem pelo WhatsApp com a marca e o modelo da televisão e indicamos-lhe a melhor opção.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "Posso instalar IPTV numa TV Hisense?",
+        a: "Depende do modelo. Nas Hisense com Google TV é simples; nas que usam VIDAA as aplicações são limitadas, e um Fire TV Stick ligado à TV é a solução mais fiável.",
+      },
+      {
+        q: "As televisões TCL têm aplicações IPTV?",
+        a: "Sim. A maioria das TCL vendidas em Portugal usa Google TV ou Android TV, onde pode instalar o TiviMate ou o IPTV Smarters Pro pela Google Play Store.",
+      },
+      {
+        q: "Como sei se a minha TV tem Google TV?",
+        a: "Procure a Google Play Store ou o logótipo Google TV no ecrã inicial, ou veja em Definições → Sobre o nome do sistema operativo.",
+      },
+      {
+        q: "Preciso de comprar uma box para ter IPTV na minha TV?",
+        a: "Só se a sua televisão não tiver uma boa aplicação IPTV na loja. Nas TV com Google TV ou Android TV não precisa de nada extra; nas restantes, um Fire TV Stick é a opção mais simples e económica.",
+      },
+    ],
+  },
+  {
+    slug: "iptv-vs-netflix-streaming",
+    title: "IPTV vs Netflix e outros streamings: qual a diferença?",
+    excerpt:
+      "IPTV e Netflix não são a mesma coisa. Comparamos TV em direto, conteúdos on-demand, preço, dispositivos e qualidade, e explicamos qual escolher para cada perfil.",
+    keyword: "IPTV vs Netflix",
+    category: "Comparações",
+    date: "2026-10-28",
+    summary: [
+      "O IPTV tem canais em direto; a Netflix e outros streamings não.",
+      "Os streamings oferecem produções originais exclusivas de cada plataforma.",
+      "Um plano IPTV junta canais ao vivo e filmes a pedido numa só mensalidade.",
+      "Para desporto, notícias e canais portugueses, o IPTV é a escolha natural.",
+      "Muitas famílias combinam os dois no mesmo aparelho.",
+    ],
+    sections: [
+      {
+        paragraphs: [
+          "A principal diferença entre IPTV e serviços de streaming como a Netflix é a televisão em direto: o IPTV transmite canais ao vivo, como a TV por cabo, com notícias, desporto e programação à hora certa, e inclui também filmes e séries a pedido; a Netflix e serviços semelhantes oferecem apenas uma biblioteca de filmes e séries a pedido, sem canais em direto.",
+          "Por isso, para muitas famílias a pergunta não é qual escolher, mas qual combinação faz mais sentido. Neste artigo comparamos os dois ponto a ponto.",
+        ],
+      },
+      {
+        heading: "Como funciona cada um",
+        paragraphs: [
+          "O IPTV é televisão pela internet: canais organizados por categorias, com guia de programação (EPG), como se tivesse uma box de cabo, mas numa aplicação. A maioria dos serviços inclui também uma área de filmes e séries a pedido (VOD).",
+          "Os serviços de streaming como a Netflix, a Disney+ ou a HBO Max produzem e licenciam os seus próprios catálogos. Escolhe o que quer ver, quando quer, mas não há canais nem programação em direto.",
+        ],
+      },
+      {
+        heading: "TV em direto: a grande diferença",
+        paragraphs: [
+          "Notícias, desporto, concursos e programas de entretenimento vivem do direto. Quem quer ver o telejornal, um jogo de futebol ou um programa à hora em que é emitido precisa de canais ao vivo, e isso é exatamente o que o IPTV oferece e os streamings tradicionais não.",
+          "O IPTV também permite ver canais de outros países, o que é especialmente útil para famílias que vivem fora de Portugal ou que querem acompanhar canais internacionais.",
+        ],
+      },
+      {
+        heading: "Filmes e séries a pedido",
+        paragraphs: [
+          "Nos conteúdos a pedido, os streamings têm a vantagem das suas produções originais, com legendas e dobragens cuidadas e recomendações personalizadas. O IPTV oferece uma biblioteca ampla de filmes e séries, mas a organização e as funcionalidades dependem da aplicação que usa.",
+        ],
+      },
+      {
+        heading: "Preço: uma subscrição ou várias",
+        paragraphs: [
+          "Cada serviço de streaming cobra a sua própria mensalidade, e quem quer ver as séries de várias plataformas acaba por pagar várias subscrições. Um plano IPTV junta canais em direto e conteúdos a pedido numa só mensalidade. No nosso serviço, o plano anual fica em cerca de 4,75€ por mês.",
+          "Antes de decidir, some o que já paga hoje em streamings e TV, e compare com o que realmente vê durante a semana.",
+        ],
+      },
+      {
+        heading: "Dispositivos e qualidade",
+        paragraphs: [
+          "Os dois funcionam em Smart TV, Fire TV Stick, telemóveis, tablets e computadores. Os streamings têm aplicações oficiais em quase todos os aparelhos. O IPTV usa aplicações leitoras, como o TiviMate ou o IPTV Smarters Pro, que se configuram em poucos minutos.",
+          "Em qualidade, ambos chegam ao 4K. No IPTV, a imagem depende também da estabilidade da sua internet, sobretudo nos canais em direto.",
+        ],
+      },
+      {
+        heading: "Qual escolher para o seu caso",
+        paragraphs: [],
+        list: [
+          "Vê sobretudo desporto, notícias e canais portugueses: IPTV.",
+          "Vê sobretudo séries originais de uma plataforma específica: o streaming dessa plataforma.",
+          "Quer substituir a TV por cabo e pagar menos: IPTV, eventualmente com um streaming para as séries favoritas.",
+          "Vive fora de Portugal e quer canais portugueses: IPTV.",
+        ],
+      },
+      {
+        heading: "Podem complementar-se",
+        paragraphs: [
+          "Muitas famílias usam os dois: IPTV para a televisão do dia a dia, o desporto e os canais internacionais, e uma plataforma de streaming para as séries originais que acompanham. Como tudo funciona no mesmo Fire TV Stick ou Smart TV, a troca entre um e outro faz-se com o comando, sem trocar de aparelho.",
+        ],
+      },
+      {
+        heading: "Experiência de uso no dia a dia",
+        paragraphs: [
+          "Os streamings são pensados para escolher: abre a aplicação, procura um título e carrega em reproduzir. O IPTV é pensado para zapping: liga a televisão e passa de canal em canal, como sempre fez, com o guia de programação a mostrar o que está a dar. Muitas pessoas gostam precisamente disso, de não ter de escolher e de ter sempre algo a dar.",
+          "Para os mais novos, o IPTV junta canais infantis em direto e desenhos animados a pedido. Para quem gosta de desporto, junta os jogos ao vivo e os programas de análise. E para quem vive no estrangeiro, junta os canais portugueses de sempre.",
+        ],
+      },
+      {
+        heading: "Perguntas para decidir",
+        paragraphs: [
+          "Antes de escolher, responda a estas perguntas:",
+        ],
+        list: [
+          "Quantas horas por semana vejo televisão em direto?",
+          "Que séries sigo, e em que plataforma estão?",
+          "Quantas subscrições de streaming pago hoje, e quanto somam por mês?",
+          "Quantas televisões e pessoas vão ver ao mesmo tempo?",
+          "A minha internet aguenta canais em direto à noite?",
+        ],
+      },
+      {
+        paragraphs: [
+          "Se a maior parte do seu tempo de televisão é em direto, o IPTV tende a compensar mais. Se é sobretudo séries de uma plataforma, essa subscrição faz mais sentido. E se é um pouco de tudo, a combinação dos dois costuma ser a mais equilibrada.",
+        ],
+      },
+      {
+        heading: "E a qualidade de imagem em cada um?",
+        paragraphs: [
+          "Nos streamings, a qualidade é ajustada automaticamente à sua internet e raramente há cortes, porque os vídeos são guardados em servidores perto de si. No IPTV, os canais em direto dependem mais da estabilidade da ligação no momento. Com uma boa internet e o aparelho ligado por cabo, ambos oferecem imagem Full HD e 4K excelente.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "O IPTV substitui a Netflix?",
+        a: "Não exatamente. O IPTV oferece canais em direto e uma biblioteca de filmes e séries, mas não inclui as produções originais exclusivas de cada plataforma de streaming.",
+      },
+      {
+        q: "Qual é a diferença entre IPTV e streaming?",
+        a: "O IPTV transmite canais de televisão em direto pela internet, com guia de programação; o streaming oferece apenas conteúdos a pedido, sem canais ao vivo.",
+      },
+      {
+        q: "Posso ver IPTV e Netflix no mesmo aparelho?",
+        a: "Sim. Smart TV, Fire TV Stick e boxes Android permitem instalar a aplicação IPTV e as aplicações de streaming lado a lado.",
+      },
+      {
+        q: "O IPTV tem filmes e séries como a Netflix?",
+        a: "Sim. A maioria dos serviços IPTV inclui uma biblioteca de filmes e séries a pedido, além dos canais em direto. Não inclui, no entanto, as produções originais exclusivas de cada plataforma de streaming.",
+      },
+    ],
+  },
+  {
+    slug: "ver-iptv-telemovel-tablet",
+    title: "Como ver IPTV no telemóvel e tablet (Android e iPhone)",
+    excerpt:
+      "Guia para ver IPTV no telemóvel e tablet Android, iPhone e iPad: que aplicação instalar, como configurar, enviar para a TV com Chromecast ou AirPlay e poupar dados móveis.",
+    keyword: "IPTV telemóvel",
+    category: "Instalação",
+    date: "2026-10-27",
+    summary: [
+      "No Android use o IPTV Smarters Pro; no iPhone e iPad, o GSE Smart IPTV.",
+      "A configuração com Xtream Codes demora poucos minutos.",
+      "Envie a imagem para a TV com Chromecast ou AirPlay.",
+      "Em dados móveis, uma hora em HD gasta cerca de 1 a 2 GB.",
+      "Cada aparelho a ver ao mesmo tempo conta como um ecrã do plano.",
+    ],
+    sections: [
+      {
+        paragraphs: [
+          "Para ver IPTV no telemóvel ou tablet, instale uma aplicação IPTV a partir da Google Play Store (Android) ou da App Store (iPhone e iPad), escolha adicionar lista com Xtream Codes e introduza os dados de acesso que recebeu por email. Em poucos minutos tem todos os canais, filmes e séries no bolso.",
+          "Neste guia explicamos que aplicação escolher, como configurar em Android e iOS, como enviar a imagem para a televisão e como poupar dados móveis quando não está em Wi-Fi.",
+        ],
+      },
+      {
+        heading: "Que aplicação instalar",
+        paragraphs: [],
+        list: [
+          "Android (telemóvel e tablet): IPTV Smarters Pro, gratuita e fácil de usar.",
+          "iPhone e iPad: GSE Smart IPTV ou IPTV Smarters, ambas na App Store.",
+          "Para testar rapidamente uma lista M3U em qualquer sistema: VLC.",
+        ],
+      },
+      {
+        heading: "Instalar no Android",
+        paragraphs: [],
+        list: [
+          "Abra a Google Play Store e procure IPTV Smarters Pro.",
+          "Instale e abra a aplicação.",
+          "Escolha Login with Xtream Codes API.",
+          "Dê um nome à lista e introduza o utilizador, a palavra-passe e o URL do servidor.",
+          "Toque em Adicionar utilizador e aguarde o carregamento dos canais.",
+        ],
+      },
+      {
+        heading: "Instalar no iPhone e iPad",
+        paragraphs: [],
+        list: [
+          "Abra a App Store e procure GSE Smart IPTV ou IPTV Smarters.",
+          "Instale a aplicação e aceite as permissões que pedir.",
+          "Adicione uma nova lista com a opção Xtream Codes.",
+          "Introduza os dados de acesso recebidos por email.",
+          "Abra a lista: os canais e o guia de programação aparecem em poucos segundos.",
+        ],
+      },
+      {
+        heading: "Enviar para a televisão: Chromecast e AirPlay",
+        paragraphs: [
+          "Pode usar o telemóvel como comando e ver na televisão. Em Android, aplicações como a GSE Smart IPTV e o IPTV Smarters suportam Chromecast: com a TV ou o Chromecast na mesma rede Wi-Fi, toque no ícone de transmitir. No iPhone e iPad, use o AirPlay para uma Apple TV ou uma Smart TV compatível.",
+          "Para ver televisão todos os dias, porém, uma aplicação instalada diretamente na TV ou num Fire TV Stick é mais estável do que transmitir a partir do telemóvel.",
+        ],
+      },
+      {
+        heading: "Poupar dados móveis",
+        paragraphs: [
+          "Fora de casa, sem Wi-Fi, o IPTV usa os dados do seu tarifário móvel. Como referência, uma hora em HD pode gastar 1 a 2 GB, e em Full HD 3 a 4 GB. Para poupar:",
+        ],
+        list: [
+          "Escolha a versão SD ou HD dos canais quando estiver em dados móveis.",
+          "Use Wi-Fi sempre que possível.",
+          "Descarregue episódios para ver offline, se a aplicação o permitir.",
+          "Confirme o limite de dados do seu tarifário antes de ver um jogo inteiro.",
+        ],
+      },
+      {
+        heading: "Ver fora de casa e em viagem",
+        paragraphs: [
+          "O IPTV funciona em qualquer lugar com internet: no trabalho, de férias ou no estrangeiro. Lembre-se de que cada aparelho a ver ao mesmo tempo conta como um ecrã do seu plano. Se alguém estiver a ver em casa enquanto vê no telemóvel, precisa de um plano com pelo menos 2 ecrãs.",
+        ],
+      },
+      {
+        heading: "Problemas comuns",
+        paragraphs: [],
+        list: [
+          "A lista não entra: confirme os dados de acesso, sem espaços a mais no início ou no fim.",
+          "A imagem para em dados móveis: baixe a qualidade do canal ou procure uma rede Wi-Fi.",
+          "Sem som em alguns canais: experimente mudar o leitor nas definições da aplicação.",
+          "A aplicação fecha sozinha: atualize-a e reinicie o telemóvel.",
+        ],
+      },
+      {
+        heading: "Funcionalidades úteis no telemóvel",
+        paragraphs: [],
+        list: [
+          "Imagem em imagem (picture-in-picture): continue a ver um canal numa janela pequena enquanto usa outras aplicações.",
+          "Favoritos sincronizados: crie a lista de canais favoritos uma vez e encontre-os mais depressa.",
+          "Controlo parental: bloqueie categorias com um PIN quando as crianças usam o tablet.",
+          "Modo horizontal bloqueado: evita que a imagem rode quando muda a posição do telemóvel.",
+        ],
+      },
+      {
+        heading: "Telemóvel ou tablet: qual é melhor para IPTV",
+        paragraphs: [
+          "O tablet tem a vantagem do ecrã maior: é ideal para ver um jogo na cozinha ou para as crianças verem desenhos animados noutra divisão. O telemóvel é mais prático fora de casa. Em ambos, a qualidade depende sobretudo da ligação: em Wi-Fi de casa a imagem é estável, em dados móveis varia com a rede e a zona.",
+          "Se usa muito o tablet em casa, um suporte e uns auscultadores sem fios transformam-no numa pequena televisão pessoal, sem ocupar a TV da sala.",
+        ],
+      },
+      {
+        heading: "Segurança e privacidade no telemóvel",
+        paragraphs: [
+          "Instale aplicações IPTV apenas a partir da Google Play Store ou da App Store e evite versões modificadas encontradas em sites desconhecidos: podem conter malware. Não partilhe os seus dados de acesso com terceiros, porque cada aparelho ligado conta como um ecrã do seu plano. E se usar redes Wi-Fi públicas, evite introduzir dados de pagamento enquanto estiver ligado a elas.",
+        ],
+      },
+      {
+        heading: "Conclusão",
+        paragraphs: [
+          "Ver IPTV no telemóvel ou tablet é rápido de configurar e dá-lhe liberdade para ver onde estiver. Escolha a aplicação certa para o seu sistema, prefira o Wi-Fi para poupar dados e use o Chromecast ou o AirPlay quando quiser passar para a televisão.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "Posso ver IPTV no telemóvel com dados móveis?",
+        a: "Sim, mas consome muitos dados: cerca de 1 a 2 GB por hora em HD. Escolha a qualidade SD ou HD e use Wi-Fi sempre que possível.",
+      },
+      {
+        q: "Qual é a melhor aplicação IPTV para iPhone?",
+        a: "A GSE Smart IPTV e o IPTV Smarters são as opções mais completas na App Store, com suporte para Xtream Codes e guia de programação.",
+      },
+      {
+        q: "Ver IPTV no telemóvel conta como um ecrã?",
+        a: "Sim. Cada aparelho a ver ao mesmo tempo conta como um ecrã do seu plano.",
+      },
+      {
+        q: "Posso ver IPTV no tablet das crianças com segurança?",
+        a: "Sim. Ative o controlo parental na aplicação IPTV e bloqueie com um PIN as categorias que não quer que as crianças vejam.",
+      },
+      {
+        q: "A aplicação IPTV gasta muita bateria?",
+        a: "Ver vídeo gasta bateria em qualquer aplicação. Baixar o brilho do ecrã e escolher a qualidade HD em vez de Full HD ajuda a ver durante mais tempo.",
+      },
+    ],
+  },
+  {
     slug: "iptv-ou-tv-por-cabo",
     title: "IPTV ou TV por cabo: o que compensa mais em Portugal?",
     excerpt:
@@ -126,6 +670,13 @@ export const posts: Post[] = [
     keyword: "IPTV ou TV cabo",
     category: "Comparações",
     date: "2026-10-22",
+    summary: [
+      "O IPTV é mais barato, sem fidelização e funciona em vários dispositivos.",
+      "A TV por cabo é mais simples e muito fiável, mas mais cara.",
+      "O IPTV precisa de internet estável: 15 Mbps por ecrã em Full HD.",
+      "Faça a mudança por fases, testando o IPTV antes de cancelar o cabo.",
+      "Confirme a data do fim da fidelização para evitar penalizações.",
+    ],
     sections: [
       {
         paragraphs: [
@@ -187,6 +738,52 @@ export const posts: Post[] = [
         ],
       },
       {
+        heading: "Quanto pode poupar por ano",
+        paragraphs: [
+          "Um exemplo ilustrativo: um pacote de TV, internet e telefone a 50€ por mês custa 600€ por ano. Uma família que passa para um tarifário só de internet e junta um plano IPTV anual paga apenas a internet mais o valor do plano IPTV. A poupança exata depende do operador e do tarifário, mas para muitas famílias chega a várias centenas de euros por ano.",
+          "Antes de decidir, some o que paga hoje por mês, veja quanto custa o tarifário só de internet no seu operador e compare com o custo anual do IPTV.",
+        ],
+      },
+      {
+        heading: "O que precisa para mudar",
+        paragraphs: [],
+        list: [
+          "Uma internet estável: 15 Mbps por ecrã em Full HD ou 25 Mbps em 4K.",
+          "Uma Smart TV recente, um Fire TV Stick ou uma box Android em cada televisão.",
+          "Uma subscrição IPTV com o número de ecrãs que precisa.",
+          "Cerca de 10 minutos para instalar a aplicação em cada televisão.",
+        ],
+      },
+      {
+        heading: "Como mudar sem ficar sem televisão",
+        paragraphs: [
+          "Faça a mudança por fases, sem pressa:",
+        ],
+        list: [
+          "Peça um teste grátis de IPTV enquanto ainda tem a TV por cabo.",
+          "Use-o durante uma semana normal, incluindo noites de jogo.",
+          "Confirme no contrato quando termina a fidelização, para evitar penalizações.",
+          "Pergunte ao operador quanto custa manter só a internet.",
+          "Só depois cancele a componente de TV.",
+        ],
+      },
+      {
+        heading: "Perguntas a fazer ao seu operador",
+        paragraphs: [],
+        list: [
+          "Quando termina a minha fidelização e qual é a penalização se sair antes?",
+          "Quanto pago se ficar só com a internet, com a mesma velocidade?",
+          "A box do operador tem de ser devolvida, e até quando?",
+          "Há algum custo de alteração de tarifário?",
+        ],
+      },
+      {
+        heading: "E a box e o comando?",
+        paragraphs: [
+          "Com IPTV deixa de precisar da box do operador. A televisão passa a ser controlada pela aplicação IPTV, com o comando da Smart TV ou do Fire TV Stick. A navegação é parecida com a da TV por cabo: lista de canais, guia de programação, favoritos e pesquisa.",
+        ],
+      },
+      {
         heading: "Qual escolher?",
         paragraphs: [
           "Escolha IPTV se quer pagar menos, ver em vários dispositivos e ter mais canais internacionais e conteúdos on-demand, e se tem uma internet estável. Fique com a TV por cabo se valoriza acima de tudo a simplicidade e não se importa de pagar mais por isso.",
@@ -219,6 +816,13 @@ export const posts: Post[] = [
     category: "Instalação",
     date: "2026-10-15",
     updated: "2026-10-30",
+    summary: [
+      "Instale uma aplicação IPTV a partir da loja da Samsung ou da LG.",
+      "As mais usadas são o IBO Player, o Smart IPTV e o SS IPTV.",
+      "Prefira Xtream Codes a M3U: o guia e as categorias carregam sozinhos.",
+      "Em TV antigas, um Fire TV Stick é a solução mais simples.",
+      "Ligue a televisão por cabo de rede para evitar cortes.",
+    ],
     sections: [
       {
         paragraphs: [
@@ -297,6 +901,17 @@ export const posts: Post[] = [
           "Mantenha o software da televisão atualizado, desligue a TV da corrente de vez em quando para limpar a memória e, se o router estiver longe, considere um adaptador Powerline ou um sistema Wi-Fi mesh. Se tiver qualquer dúvida durante a instalação, o nosso suporte ajuda-o pelo WhatsApp, passo a passo.",
         ],
       },
+      {
+        heading: "Atalhos úteis no comando",
+        paragraphs: [
+          "Depois de instalar, use os botões numéricos do comando para saltar diretamente para um canal, o botão de informação para ver o programa atual e os botões coloridos, quando a aplicação os suporta, para abrir o guia ou os favoritos. Vale a pena criar uma lista de favoritos logo no primeiro dia: a navegação fica muito mais rápida.",
+        ],
+      },
+      {
+        paragraphs: [
+          "Se tiver qualquer dúvida sobre a compatibilidade do seu modelo, envie-nos a marca e o modelo da televisão pelo WhatsApp antes de comprar: indicamos-lhe a melhor aplicação ou se compensa usar um Fire TV Stick.",
+        ],
+      },
     ],
     faq: [
       {
@@ -320,6 +935,13 @@ export const posts: Post[] = [
     keyword: "IPTV Fire TV Stick",
     category: "Instalação",
     date: "2026-10-08",
+    summary: [
+      "Ative a instalação de aplicações desconhecidas para o Downloader.",
+      "Instale a aplicação IPTV indicada pelo suporte e entre com Xtream Codes.",
+      "O Fire TV Stick 4K Max é o melhor modelo para 4K e desporto.",
+      "Desative a reprodução automática e a recolha de dados para mais rapidez.",
+      "Um adaptador Ethernet elimina a maioria dos cortes.",
+    ],
     sections: [
       {
         paragraphs: [
@@ -387,6 +1009,51 @@ export const posts: Post[] = [
           "Mantenha o Fire TV Stick atualizado, reinicie-o uma vez por semana e, se usar Wi-Fi, coloque o router o mais perto possível da TV. Se tiver dúvidas em qualquer passo, o nosso suporte ajuda-o pelo WhatsApp.",
         ],
       },
+      {
+        heading: "Qual Fire TV Stick escolher",
+        paragraphs: [
+          "A Amazon vende vários modelos e a diferença sente-se no IPTV. O Fire TV Stick Lite e o Fire TV Stick normal mostram imagem até Full HD e chegam para quem vê sobretudo canais em HD. O Fire TV Stick 4K e o 4K Max têm processadores mais rápidos, mais memória e Wi-Fi mais moderno, o que se traduz em menos esperas ao trocar de canal e em imagem 4K.",
+          "Se vai ver desporto ou canais em 4K, escolha o Fire TV Stick 4K Max. Para uma segunda televisão no quarto, o modelo normal é suficiente.",
+        ],
+      },
+      {
+        heading: "Configurar o TiviMate no Fire TV Stick",
+        paragraphs: [
+          "O TiviMate é a aplicação preferida no Fire TV Stick. Depois de a instalar:",
+        ],
+        list: [
+          "Abra o TiviMate e escolha Adicionar lista (Add playlist).",
+          "Selecione Xtream Codes e introduza o URL do servidor, o utilizador e a palavra-passe.",
+          "Confirme em Seguinte: o TiviMate mostra o número de canais, filmes e séries encontrados.",
+          "Dê um nome à lista e termine. O guia de programação (EPG) carrega automaticamente.",
+          "Nas definições, esconda os grupos de canais que não usa e crie um grupo de favoritos.",
+        ],
+      },
+      {
+        heading: "Otimizar o Fire TV Stick para IPTV",
+        paragraphs: [
+          "Alguns ajustes simples deixam o Fire TV Stick mais rápido e estável:",
+        ],
+        list: [
+          "Em Definições → Preferências → Conteúdo em destaque, desative a reprodução automática de vídeo e áudio.",
+          "Em Definições → Preferências → Definições de privacidade, desative a recolha de dados de utilização.",
+          "Desinstale as aplicações que não usa para libertar memória e armazenamento.",
+          "Limpe a cache da aplicação IPTV de vez em quando, em Definições → Aplicações.",
+          "Ligue o Fire TV Stick à corrente com o transformador original, e não à porta USB da TV, que muitas vezes não dá energia suficiente.",
+        ],
+      },
+      {
+        heading: "Usar o Fire TV Stick fora de casa",
+        paragraphs: [
+          "Uma vantagem do Fire TV Stick é poder levá-lo consigo: funciona em qualquer televisão com porta HDMI e ligação Wi-Fi, na casa de férias ou num hotel. Em redes de hotel que pedem login numa página web, a ligação pode ser mais difícil; nesses casos, partilhar a internet do telemóvel é uma alternativa, com atenção ao consumo de dados.",
+        ],
+      },
+      {
+        heading: "Controlo parental no Fire TV Stick",
+        paragraphs: [
+          "Se tem crianças em casa, ative o controlo parental em dois níveis. No Fire TV Stick, em Definições → Preferências → Controlo parental, defina um PIN para compras e aplicações. Na aplicação IPTV, como o TiviMate ou o IPTV Smarters, bloqueie as categorias de canais e filmes que não quer que as crianças vejam. Assim fica com uma televisão segura para toda a família, sem perder o acesso aos seus canais.",
+        ],
+      },
     ],
     updated: "2026-10-30",
     faq: [
@@ -402,6 +1069,10 @@ export const posts: Post[] = [
         q: "O IPTV no Fire TV Stick funciona por Wi-Fi?",
         a: "Funciona, mas para 4K e jogos em direto recomendamos um adaptador Ethernet ou a rede Wi-Fi de 5 GHz.",
       },
+      {
+        q: "Quanto tempo demora a instalar IPTV no Fire TV Stick?",
+        a: "Cerca de 10 minutos na primeira vez: ativar as opções de programador, instalar o Downloader e a aplicação IPTV, e entrar com os dados de acesso.",
+      },
     ],
   },
   {
@@ -413,6 +1084,13 @@ export const posts: Post[] = [
     category: "Guias",
     date: "2026-09-30",
     updated: "2026-10-30",
+    summary: [
+      "TiviMate: a melhor para Fire TV Stick e Android TV.",
+      "IPTV Smarters Pro: gratuita e disponível em quase todos os aparelhos.",
+      "IBO Player: a opção mais comum em Smart TV Samsung e LG.",
+      "GSE Smart IPTV: a mais completa para iPhone, iPad e Apple TV.",
+      "Instale sempre a partir das lojas oficiais.",
+    ],
     sections: [
       {
         paragraphs: [
@@ -494,6 +1172,32 @@ export const posts: Post[] = [
           "Instale aplicações apenas a partir das lojas oficiais (Google Play, Amazon Appstore, App Store, lojas Samsung e LG) ou dos sites oficiais dos programadores. Evite versões modificadas de aplicações pagas: podem conter malware e expor os seus dados.",
         ],
       },
+      {
+        heading: "Funcionalidades que fazem diferença",
+        paragraphs: [
+          "Na hora de escolher, veja se a aplicação tem:",
+        ],
+        list: [
+          "Guia de programação (EPG) claro e rápido.",
+          "Favoritos e possibilidade de esconder grupos de canais.",
+          "Pesquisa em canais, filmes e séries.",
+          "Catch-up, para ver programas que já passaram.",
+          "Controlo parental, para bloquear categorias com PIN.",
+          "Legendas e escolha de idioma nos filmes e séries.",
+        ],
+      },
+      {
+        heading: "Configurar qualquer aplicação em 5 minutos",
+        paragraphs: [
+          "O processo é parecido em todas: instale a aplicação a partir da loja oficial, escolha adicionar lista com Xtream Codes, introduza o URL do servidor, o utilizador e a palavra-passe que recebeu por email e aguarde o carregamento dos canais e do guia. Se tiver dúvidas, o nosso suporte acompanha-o pelo WhatsApp.",
+        ],
+      },
+      {
+        heading: "Mudar de aplicação sem perder nada",
+        paragraphs: [
+          "Como os canais vêm da sua subscrição e não da aplicação, pode experimentar várias aplicações sem perder nada. Instale a nova aplicação, adicione os mesmos dados de acesso e compare. A única coisa que não passa de uma aplicação para outra são os favoritos e as definições: vale a pena criar a lista de favoritos de novo na aplicação que escolher.",
+        ],
+      },
     ],
     faq: [
       {
@@ -508,6 +1212,10 @@ export const posts: Post[] = [
         q: "Posso usar a mesma subscrição em várias aplicações?",
         a: "Sim. Pode usar os mesmos dados de acesso em várias aplicações e dispositivos, respeitando o número de ecrãs em simultâneo do seu plano.",
       },
+      {
+        q: "Qual é a melhor aplicação IPTV gratuita?",
+        a: "O IPTV Smarters Pro é a aplicação gratuita mais completa e está disponível em quase todos os dispositivos, com guia de programação, filmes e séries.",
+      },
     ],
   },
   {
@@ -519,6 +1227,13 @@ export const posts: Post[] = [
     category: "Dicas",
     date: "2026-09-22",
     updated: "2026-10-30",
+    summary: [
+      "O buffering vem quase sempre do Wi-Fi, da internet ou do dispositivo.",
+      "Ligar por cabo de rede é a solução que resolve mais casos.",
+      "Teste a velocidade no próprio dispositivo, à hora do problema.",
+      "Limpe a cache da aplicação e aumente o buffer do leitor.",
+      "Se acontecer em todos os canais, fale com o suporte.",
+    ],
     sections: [
       {
         paragraphs: [
@@ -602,6 +1317,30 @@ export const posts: Post[] = [
           "Se o buffering acontece em todos os canais, a todas as horas, mesmo com boa internet e o dispositivo ligado por cabo, o problema está nos servidores do fornecedor. Um bom serviço usa tecnologia antifreeze e servidores de reserva para evitar cortes, e responde rapidamente quando há problemas.",
         ],
       },
+      {
+        heading: "Checklist antes de contactar o suporte",
+        paragraphs: [
+          "Para resolvermos o problema mais depressa, tenha estas informações à mão:",
+        ],
+        list: [
+          "O dispositivo e a aplicação que usa.",
+          "Se está ligado por cabo ou por Wi-Fi.",
+          "O resultado de um teste de velocidade feito no próprio dispositivo.",
+          "Se o problema acontece em todos os canais ou só em alguns, e a que horas.",
+        ],
+      },
+      {
+        heading: "Como evitar cortes num jogo importante",
+        paragraphs: [
+          "Meia hora antes do jogo, reinicie o router e o dispositivo, pause downloads e atualizações e abra o canal com antecedência. Se a internet for limitada, escolha a versão Full HD do canal em vez da 4K. Pequenos cuidados como estes evitam a maioria das interrupções nos momentos que contam.",
+        ],
+      },
+      {
+        heading: "Buffering só em filmes e séries?",
+        paragraphs: [
+          "Se os canais em direto funcionam bem mas os filmes e séries param, experimente mudar o leitor nas definições da aplicação (por exemplo, de leitor interno para VLC ou ExoPlayer) e limpe a cache. Os ficheiros de filmes em 4K são grandes: em internet mais lenta, escolha a versão Full HD quando estiver disponível.",
+        ],
+      },
     ],
     faq: [
       {
@@ -627,6 +1366,13 @@ export const posts: Post[] = [
     category: "Dicas",
     date: "2026-09-15",
     updated: "2026-10-30",
+    summary: [
+      "HD precisa de 10 Mbps, Full HD de 15 Mbps e 4K de 25 Mbps, por ecrã.",
+      "A estabilidade conta tanto como a velocidade máxima.",
+      "A fibra ótica é a melhor opção para vários ecrãs em 4K.",
+      "O Wi-Fi é muitas vezes o verdadeiro problema, e não o tarifário.",
+      "Use a calculadora de velocidade IPTV para fazer as contas da sua casa.",
+    ],
     sections: [
       {
         paragraphs: [
@@ -691,6 +1437,38 @@ export const posts: Post[] = [
         ],
       },
       {
+        heading: "Velocidade contratada e velocidade real",
+        paragraphs: [
+          "A velocidade do tarifário é o máximo que pode chegar a sua casa, e não o que chega a cada aparelho. A distância ao router, as paredes, o número de aparelhos ligados e a qualidade do próprio router reduzem a velocidade real. É comum ter fibra de 500 Mbps e só 30 Mbps na TV do quarto, por causa do Wi-Fi.",
+        ],
+      },
+      {
+        heading: "Como melhorar o Wi-Fi em casa",
+        paragraphs: [],
+        list: [
+          "Coloque o router num ponto central e alto, longe de micro-ondas e paredes grossas.",
+          "Ligue a TV à rede de 5 GHz em vez da de 2,4 GHz.",
+          "Em casas grandes ou com vários pisos, use um sistema Wi-Fi mesh.",
+          "Quando não dá para passar cabo, os adaptadores Powerline levam a internet pela instalação elétrica.",
+          "Atualize o software do router e reinicie-o de vez em quando.",
+        ],
+      },
+      {
+        paragraphs: [
+          "Pode fazer as contas da sua casa em segundos com a nossa calculadora de velocidade IPTV.",
+        ],
+      },
+      {
+        heading: "Erros comuns ao avaliar a internet",
+        paragraphs: [],
+        list: [
+          "Testar no telemóvel ao lado do router e assumir que a TV do quarto tem a mesma velocidade.",
+          "Testar de manhã, quando a rede está calma, e não à noite.",
+          "Esquecer que outras pessoas em casa estão a usar a internet ao mesmo tempo.",
+          "Mudar para um tarifário mais caro quando o problema é o Wi-Fi.",
+        ],
+      },
+      {
         heading: "Resumo",
         paragraphs: [
           "Para um ecrã em Full HD, 15 Mbps estáveis chegam. Para 4K ou vários ecrãs, a fibra ótica é a escolha certa. E antes de mudar de tarifário, experimente ligar por cabo: na maioria das casas, o problema é o Wi-Fi e não a velocidade contratada.",
@@ -710,6 +1488,10 @@ export const posts: Post[] = [
         q: "Quantos GB gasta o IPTV por hora?",
         a: "Aproximadamente 1 a 2 GB por hora em HD, 3 a 4 GB em Full HD e 7 GB ou mais em 4K, conforme o canal. Isto importa sobretudo em internet 4G ou 5G com limite de dados.",
       },
+      {
+        q: "A fibra de 100 Mbps chega para IPTV em 4K?",
+        a: "Sim. 100 Mbps estáveis chegam para dois a três ecrãs em 4K ao mesmo tempo, com margem para o resto da internet da casa.",
+      },
     ],
   },
   {
@@ -721,6 +1503,13 @@ export const posts: Post[] = [
     category: "Guias",
     date: "2026-09-05",
     updated: "2026-10-30",
+    summary: [
+      "O EPG é o guia de programação eletrónico do IPTV.",
+      "Com Xtream Codes carrega automaticamente na maioria das aplicações.",
+      "Em listas M3U pode ser preciso adicionar o URL do EPG.",
+      "Horas erradas resolvem-se com o desfasamento de tempo nas definições.",
+      "Com EPG pode marcar lembretes e, em alguns canais, usar catch-up.",
+    ],
     sections: [
       {
         paragraphs: [
@@ -774,6 +1563,42 @@ export const posts: Post[] = [
           "Com o EPG ativo, aplicações como o TiviMate permitem marcar lembretes e, na versão Premium, gravar programas. Alguns canais têm também catch-up, que permite ver programas que já passaram nos últimos dias. Estas funcionalidades dependem da aplicação e de cada canal.",
         ],
       },
+      {
+        heading: "Como adicionar o EPG numa lista M3U",
+        paragraphs: [
+          "Com listas M3U, o guia nem sempre vem incluído. Nesse caso, a aplicação precisa de um segundo link: o URL do EPG, normalmente um ficheiro XMLTV. Peça-o ao suporte e adicione-o nas definições do guia da aplicação, na opção Fonte de EPG ou EPG URL.",
+          "Depois de adicionar o link, force a atualização e aguarde alguns minutos. Se os canais tiverem o mesmo identificador no ficheiro M3U e no guia, a programação aparece automaticamente em cada canal.",
+        ],
+      },
+      {
+        heading: "Quantos dias de programação mostra o EPG",
+        paragraphs: [
+          "Depende do fornecedor e de cada canal. Normalmente o guia mostra entre 1 e 7 dias de programação. Os canais principais têm quase sempre mais dias e informação mais detalhada, como sinopses e categorias.",
+        ],
+      },
+      {
+        heading: "Organizar o guia: favoritos e grupos",
+        paragraphs: [
+          "Com milhares de canais, um guia completo pode ser difícil de navegar. Crie um grupo de favoritos com os canais que vê todos os dias e esconda os grupos que não lhe interessam. No TiviMate e no IPTV Smarters, basta manter carregado o botão OK sobre um canal para o adicionar aos favoritos.",
+          "Assim, o guia abre diretamente nos seus canais e a navegação fica tão simples como na TV por cabo.",
+        ],
+      },
+      {
+        heading: "Dicas para um guia sempre atualizado",
+        paragraphs: [],
+        list: [
+          "Defina a atualização automática do EPG para uma vez por dia.",
+          "Mantenha a data e a hora do dispositivo em modo automático.",
+          "Depois de mudar de lista ou de servidor, force uma atualização do guia.",
+          "Se o guia ficar lento, limpe a cache da aplicação.",
+        ],
+      },
+      {
+        heading: "EPG na prática: um exemplo",
+        paragraphs: [
+          "Imagine que quer ver um jogo que começa às 20h45. Abre o guia, procura o canal de desporto nos favoritos e vê o jogo marcado na grelha. Seleciona o programa e escolhe Lembrete: alguns minutos antes, a aplicação avisa-o e muda de canal com um clique. Se chegar atrasado e o canal tiver catch-up, pode até começar a ver desde o início. É esta comodidade que torna o EPG uma das funcionalidades mais importantes de qualquer serviço IPTV.",
+        ],
+      },
     ],
     faq: [
       {
@@ -787,6 +1612,14 @@ export const posts: Post[] = [
       {
         q: "Como corrijo o EPG com as horas erradas?",
         a: "Ajuste o desfasamento de tempo (EPG offset ou time shift) nas definições da aplicação, em +1 ou -1 hora, e confirme o fuso horário do dispositivo.",
+      },
+      {
+        q: "O EPG funciona em todos os canais?",
+        a: "Na maioria dos canais principais sim. Canais de eventos, canais 24/7 e alguns canais regionais podem não ter guia de programação.",
+      },
+      {
+        q: "De quanto em quanto tempo o EPG atualiza?",
+        a: "Depende da aplicação. Recomendamos configurar a atualização automática uma vez por dia, ou forçá-la depois de mudar de lista.",
       },
     ],
   },
