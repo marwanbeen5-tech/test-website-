@@ -62,6 +62,11 @@ export default function Footer() {
                 Sobre Nós
               </Link>
             </li>
+            <li>
+              <Link href="/autor/rabiaa-reggad" className="hover:text-fg">
+                Quem Escreve o Blog
+              </Link>
+            </li>
           </ul>
         </div>
         <div>

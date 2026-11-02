@@ -1,4 +1,6 @@
+import Link from "next/link";
 import BlogList from "@/components/BlogList";
+import { author, authorPath } from "@/lib/authors";
 import JsonLd from "@/components/JsonLd";
 import PageShell from "@/components/PageShell";
 import { breadcrumbLd, pageMeta } from "@/lib/seo";
@@ -16,6 +18,13 @@ export default function BlogPage() {
       title="Blog IPTV Portugal"
       intro="Guias práticos, tutoriais de instalação e dicas para tirar o máximo partido do seu IPTV."
     >
+      <p className="-mt-6 text-sm">
+        Guias escritos por{" "}
+        <Link href={authorPath} className="font-semibold text-fg hover:underline">
+          {author.name}
+        </Link>
+        , com mais de 3 anos de experiência em IPTV.
+      </p>
       <JsonLd data={breadcrumbLd([{ name: "Blog", path: "/blog" }])} />
       <JsonLd
         data={{

@@ -1,16 +1,23 @@
 import { site } from "./site";
 
 // Article author, shown in bylines and emitted as a Person in structured data.
-// The bio only describes the role on the blog: add real experience or credentials here.
+// Experience stated here is as confirmed by the business (3+ years in IPTV).
 export const author = {
   name: "Rabiaa Reggad",
   slug: "rabiaa-reggad",
-  role: "Guias e conteúdos",
+  role: "Especialista em IPTV",
   bio: [
-    "Rabiaa Reggad escreve os guias do blog Portugal IPTV. Os artigos explicam, passo a passo e em linguagem simples, como instalar IPTV em cada aparelho, que aplicação escolher e como resolver problemas de internet e de imagem.",
-    "O objetivo de cada guia é responder de forma direta às perguntas que os clientes nos fazem todos os dias no suporte, para que qualquer pessoa consiga configurar o serviço sem ajuda técnica.",
+    "Rabiaa Reggad trabalha com IPTV há mais de 3 anos e escreve os guias do blog Portugal IPTV. Conhece o serviço de ponta a ponta: servidores, aplicações, aparelhos, internet em casa e as dúvidas mais comuns de quem está a começar.",
+    "Cada guia nasce das perguntas que os clientes fazem todos os dias no suporte e explica, passo a passo e em linguagem simples, como instalar, configurar e resolver problemas, para que qualquer pessoa consiga ver IPTV sem ajuda técnica.",
   ],
-  topics: ["Instalação de IPTV", "Aplicações IPTV", "Internet e Wi-Fi em casa", "Guia de programação (EPG)"],
+  topics: [
+    "IPTV",
+    "Instalação de IPTV",
+    "Aplicações IPTV",
+    "Servidores e estabilidade de streaming",
+    "Internet e Wi-Fi em casa",
+    "Guia de programação (EPG)",
+  ],
 };
 
 export const authorPath = `/autor/${author.slug}`;
