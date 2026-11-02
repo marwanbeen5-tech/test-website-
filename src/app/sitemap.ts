@@ -13,6 +13,7 @@ const pages: { path: string; priority: number }[] = [
   { path: "/blog", priority: 0.8 },
   { path: "/revenda", priority: 0.7 },
   { path: "/sobre", priority: 0.6 },
+  { path: "/autor/rabiaa-reggad", priority: 0.5 },
   { path: "/contacto", priority: 0.6 },
   { path: "/termos", priority: 0.3 },
   { path: "/privacidade", priority: 0.3 },

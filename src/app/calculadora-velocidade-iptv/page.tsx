@@ -1,6 +1,7 @@
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import PageShell from "@/components/PageShell";
+import { SpeedChart } from "@/components/Figures";
 import SpeedCalculator from "@/components/SpeedCalculator";
 import { breadcrumbLd, pageMeta } from "@/lib/seo";
 import { site } from "@/lib/site";
@@ -61,6 +62,7 @@ export default function CalculadoraPage() {
       <SpeedCalculator />
 
       <h2>Como calculamos</h2>
+      <SpeedChart />
       <p>
         Somamos a velocidade recomendada para cada ecrã a ver ao mesmo tempo e juntamos uma margem para o resto da
         internet da casa. Os valores incluem uma folga de segurança para que pequenas quebras não interrompam a

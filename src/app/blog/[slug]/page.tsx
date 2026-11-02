@@ -4,6 +4,8 @@ import Icon from "@/components/Icon";
 import JsonLd from "@/components/JsonLd";
 import PageShell from "@/components/PageShell";
 import PostCover from "@/components/PostCover";
+import { articleFigures } from "@/components/Figures";
+import { author, authorLd, authorPath } from "@/lib/authors";
 import { breadcrumbLd, pageMeta } from "@/lib/seo";
 import { formatDate, headingId, posts, readingTime } from "@/lib/posts";
 import { site, trialWhatsapp } from "@/lib/site";
@@ -19,9 +21,20 @@ export async function generateMetadata({ params }: Props) {
   const post = posts.find((p) => p.slug === slug);
   if (!post) return {};
   const meta = pageMeta(`/blog/${post.slug}`, post.title, post.excerpt);
+  // Each article has its own share image (opengraph-image.tsx in this folder).
+  const image = `/blog/${post.slug}/opengraph-image`;
   return {
     ...meta,
-    openGraph: { ...meta.openGraph, type: "article", publishedTime: post.date, modifiedTime: post.updated ?? post.date },
+    authors: [{ name: author.name, url: authorPath }],
+    openGraph: {
+      ...meta.openGraph,
+      type: "article",
+      publishedTime: post.date,
+      modifiedTime: post.updated ?? post.date,
+      authors: [author.name],
+      images: [{ url: image, width: 1200, height: 630, alt: post.title }],
+    },
+    twitter: { card: "summary_large_image", images: [image] },
   };
 }
 
@@ -36,6 +49,7 @@ export default async function PostPage({ params }: Props) {
     ...(post.faq?.length ? [faqHeading] : []),
   ];
   // Speed and buffering articles point readers to the calculator tool.
+  const Figure = articleFigures[post.slug];
   const showCalculator = ["melhor-velocidade-internet-4k", "iptv-buffering-solucoes", "iptv-futebol-sem-cortes"].includes(post.slug);
   // Same category first, then the newest others.
   const related = [
@@ -56,10 +70,10 @@ export default async function PostPage({ params }: Props) {
           datePublished: post.date,
           dateModified: post.updated ?? post.date,
           inLanguage: "pt-PT",
-          author: { "@type": "Organization", name: site.name, url: site.url },
+          author: authorLd(),
           publisher: { "@type": "Organization", name: site.name, logo: { "@type": "ImageObject", url: `${site.url}/icon.svg` } },
           mainEntityOfPage: `${site.url}/blog/${post.slug}`,
-          image: `${site.url}/opengraph-image`,
+          image: `${site.url}/blog/${post.slug}/opengraph-image`,
         }}
       />
       <JsonLd data={breadcrumbLd([{ name: "Blog", path: "/blog" }, { name: post.title, path: `/blog/${post.slug}` }])} />
@@ -88,7 +102,11 @@ export default async function PostPage({ params }: Props) {
           <Icon name="clock" className="h-4 w-4" /> {readingTime(post)} min de leitura
         </span>
         <span>
-          Por {site.name} · <time dateTime={post.date}>{formatDate(post.date)}</time>
+          Por{" "}
+          <Link href={authorPath} className="font-semibold text-fg hover:underline">
+            {author.name}
+          </Link>{" "}
+          · <time dateTime={post.date}>{formatDate(post.date)}</time>
         </span>
         {post.updated && post.updated !== post.date && (
           <span>
@@ -153,6 +171,7 @@ export default async function PostPage({ params }: Props) {
                 ))}
               </ul>
             )}
+            {i === 0 && Figure ? <Figure /> : null}
           </section>
         ))}
 
@@ -170,6 +189,19 @@ export default async function PostPage({ params }: Props) {
           </section>
         ) : null}
       </article>
+
+      <aside aria-label="Sobre a autoria" className="flex items-start gap-4 rounded-2xl border border-border bg-surface p-6">
+        <span aria-hidden="true" className="bg-gradient-brand flex h-12 w-12 shrink-0 items-center justify-center rounded-full font-extrabold">
+          RR
+        </span>
+        <span>
+          <span className="block text-xs font-semibold uppercase tracking-wider text-muted">Escrito por</span>
+          <Link href={authorPath} className="block font-bold text-fg hover:underline">
+            {author.name}
+          </Link>
+          <span className="mt-1 block text-sm">{author.bio[0]}</span>
+        </span>
+      </aside>
 
       {showCalculator && (
         <Link
