@@ -38,7 +38,13 @@ export default function AboutIptv() {
             <h3 className="pt-2 text-xl font-bold text-fg">Porque é que cada vez mais portugueses mudam para IPTV?</h3>
             <ul className="list-disc space-y-2 pl-5">
               <li>Custa uma fração de um pacote de TV por cabo, sem contrato de 24 meses.</li>
-              <li>Funciona em vários dispositivos, em casa ou fora de Portugal.</li>
+              <li>
+                Funciona em vários dispositivos, em casa ou{" "}
+                <Link href="/iptv-portugal" className="text-gradient font-semibold hover:underline">
+                  fora de Portugal
+                </Link>
+                .
+              </li>
               <li>Inclui guia de programação (EPG), filmes e séries a pedido.</li>
               <li>A ativação é feita em minutos, sem técnico nem instalação.</li>
             </ul>

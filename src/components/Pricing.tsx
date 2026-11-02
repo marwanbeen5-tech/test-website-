@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import Icon from "./Icon";
 import Countdown from "./Countdown";
@@ -103,8 +104,10 @@ export default function Pricing() {
         <div>
           <p className="font-bold">Garantia de reembolso de 7 dias</p>
           <p className="text-sm text-muted">
-            Experimente sem risco. Se não ficar satisfeito, devolvemos 100% do seu dinheiro. Pagamento seguro com
-            encriptação SSL.
+            Experimente sem risco. Se não ficar satisfeito, devolvemos 100% do seu dinheiro.{" "}
+            <Link href="/como-comprar" className="text-gradient font-semibold hover:underline">
+              Como funciona a compra →
+            </Link>
           </p>
         </div>
       </div>

@@ -4,6 +4,7 @@ import Steps from "@/components/Steps";
 import Features from "@/components/Features";
 import Devices from "@/components/Devices";
 import Pricing from "@/components/Pricing";
+import PlanQuiz from "@/components/PlanQuiz";
 import AboutIptv from "@/components/AboutIptv";
 import Comparison from "@/components/Comparison";
 import LatestPosts from "@/components/LatestPosts";
@@ -31,6 +32,7 @@ export default function Home() {
       <JsonLd data={faqLd()} />
       <Hero />
       <Pricing />
+      <PlanQuiz />
       <CategoryBand />
       <AboutIptv />
       <Steps />

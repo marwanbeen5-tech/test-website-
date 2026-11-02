@@ -18,6 +18,23 @@ export default function Analytics() {
     return () => window.removeEventListener(CONSENT_EVENT, onChange);
   }, []);
 
+  // Every WhatsApp link click is a lead: report it as a GA4 event and a Meta "Contact".
+  // `cta` names the button (data-cta), or falls back to the link text.
+  useEffect(() => {
+    if (!allowed) return;
+    function onClick(e: MouseEvent) {
+      const link = (e.target as Element | null)?.closest?.('a[href*="wa.me/"]') as HTMLAnchorElement | null;
+      if (!link) return;
+      const w = window as unknown as { gtag?: (...a: unknown[]) => void; fbq?: (...a: unknown[]) => void };
+      const cta = link.dataset.cta || link.textContent?.trim().slice(0, 60) || "whatsapp";
+      const trial = decodeURIComponent(link.href).includes("teste grátis");
+      w.gtag?.("event", "whatsapp_click", { cta, trial, page_path: location.pathname });
+      w.fbq?.("track", "Contact", { content_name: cta });
+    }
+    document.addEventListener("click", onClick);
+    return () => document.removeEventListener("click", onClick);
+  }, [allowed]);
+
   if (!allowed) return null;
 
   return (

@@ -1,10 +1,14 @@
 import type { MetadataRoute } from "next";
+import { countries } from "@/lib/countries";
 import { posts, site, SITE_UPDATED } from "@/lib/site";
 
 const pages: { path: string; priority: number }[] = [
   { path: "", priority: 1 },
   { path: "/teste-gratis", priority: 0.9 },
   { path: "/calculadora-velocidade-iptv", priority: 0.8 },
+  { path: "/como-comprar", priority: 0.7 },
+  { path: "/iptv-portugal", priority: 0.8 },
+  ...countries.map((c) => ({ path: `/iptv-portugal/${c.slug}`, priority: 0.7 })),
   { path: "/instalacao", priority: 0.8 },
   { path: "/blog", priority: 0.8 },
   { path: "/revenda", priority: 0.7 },

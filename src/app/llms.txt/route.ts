@@ -1,3 +1,4 @@
+import { countries } from "@/lib/countries";
 import { faqs, plans, posts, site, supportContact } from "@/lib/site";
 
 // Plain-text summary for AI assistants (llms.txt convention).
@@ -25,6 +26,9 @@ ${prices}
 - [Teste grátis 24h](${site.url}/teste-gratis)
 - [Guia de instalação](${site.url}/instalacao)
 - [Calculadora de velocidade IPTV](${site.url}/calculadora-velocidade-iptv)
+- [Como comprar](${site.url}/como-comprar)
+- [IPTV Portugal no estrangeiro](${site.url}/iptv-portugal)
+${countries.map((c) => `- [IPTV Portugal ${c.inName}](${site.url}/iptv-portugal/${c.slug})`).join("\n")}
 - [Revenda](${site.url}/revenda)
 - [Contactos](${site.url}/contacto)
 ${posts.map((p) => `- [${p.title}](${site.url}/blog/${p.slug})`).join("\n")}

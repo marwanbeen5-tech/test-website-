@@ -43,6 +43,16 @@ export default function Footer() {
               </a>
             </li>
             <li>
+              <Link href="/como-comprar" className="hover:text-fg">
+                Como Comprar
+              </Link>
+            </li>
+            <li>
+              <Link href="/iptv-portugal" className="hover:text-fg">
+                Portugueses no Estrangeiro
+              </Link>
+            </li>
+            <li>
               <Link href="/calculadora-velocidade-iptv" className="hover:text-fg">
                 Calculadora de Velocidade
               </Link>
