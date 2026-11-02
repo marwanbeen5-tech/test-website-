@@ -10,13 +10,13 @@ export default function PageShell({
   return (
     <section className="relative overflow-hidden">
       <div className="bg-grid pointer-events-none absolute inset-x-0 top-0 h-80" />
-      <div className="animate-blob pointer-events-none absolute -top-32 right-0 h-72 w-72 rounded-full bg-brand/25 blur-[110px]" />
+      <div className="animate-blob pointer-events-none absolute hidden md:block -top-32 right-0 h-72 w-72 rounded-full bg-brand/25 blur-[110px]" />
       <div className="relative mx-auto max-w-4xl px-4 py-20">
-        <h1 className="animate-fade-up text-4xl font-extrabold md:text-5xl">
+        <h1 className="text-4xl font-extrabold md:text-5xl">
           <span className="text-gradient">{title}</span>
         </h1>
         {intro && (
-          <p className="animate-fade-up mt-4 text-lg text-muted" style={{ animationDelay: "0.1s" }}>
+          <p className="mt-4 text-lg text-muted">
             {intro}
           </p>
         )}
