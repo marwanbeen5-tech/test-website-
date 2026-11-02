@@ -4,7 +4,8 @@ import Script from "next/script";
 import { useEffect, useState } from "react";
 import { CONSENT_EVENT, readConsent } from "./CookieBanner";
 
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+// GA4 property "portugaliptv.top". The env variable can override it (e.g. for a test property).
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "G-DH416J4BBE";
 const PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID;
 
 // Loads Google Analytics and Meta Pixel only after the visitor accepts cookies.
