@@ -41,7 +41,12 @@ export const metadata: Metadata = {
   twitter: { card: "summary_large_image" },
   verification: { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION },
   // Geographic targeting for Portugal.
-  other: { "geo.region": "PT", "geo.placename": "Portugal", language: "pt-PT" },
+  other: {
+    "geo.region": "PT",
+    "geo.placename": "Portugal",
+    language: "pt-PT",
+    "p:domain_verify": "815138c6f47bf94145d131a8b2561c38",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
