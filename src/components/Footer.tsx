@@ -2,7 +2,7 @@ import Link from "next/link";
 import Logo from "./Logo";
 import Icon from "./Icon";
 import { CookieSettingsButton } from "./CookieBanner";
-import { legalLinks, nav, site, whatsappLink, trialWhatsapp } from "@/lib/site";
+import { legalLinks, nav, site, social, whatsappLink, trialWhatsapp } from "@/lib/site";
 
 const paymentMethods = ["Visa", "Mastercard", "PayPal", "MB WAY", "Multibanco", "Apple Pay"];
 
@@ -26,6 +26,16 @@ export default function Footer() {
               </span>
             ))}
           </div>
+          <p className="mt-6 text-sm font-semibold">Siga-nos</p>
+          <ul className="mt-2 flex flex-wrap gap-x-4 gap-y-2 text-sm text-muted">
+            {social.map((s) => (
+              <li key={s.href}>
+                <a href={s.href} target="_blank" rel="noopener noreferrer me" className="hover:text-fg">
+                  {s.label}
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
         <div>
           <p className="font-semibold">Links</p>

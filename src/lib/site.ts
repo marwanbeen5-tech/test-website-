@@ -20,6 +20,15 @@ export const site = {
   address: "Lisboa, Portugal",
 };
 
+// Official profiles: linked in the footer and listed as sameAs for search engines.
+export const social = [
+  { label: "Facebook", href: "https://www.facebook.com/portugaliptv.top" },
+  { label: "Instagram", href: "https://www.instagram.com/portugaliptvtop/" },
+  { label: "TikTok", href: "https://www.tiktok.com/@portugaliptv.top" },
+  { label: "YouTube", href: "https://www.youtube.com/@portugaliptvtop" },
+  { label: "Pinterest", href: "https://www.pinterest.com/portugaliptvtop/" },
+];
+
 export const nav = [
   { href: "/", label: "Início" },
   { href: "/instalacao", label: "Instalação" },

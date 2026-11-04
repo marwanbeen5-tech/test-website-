@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { faqs, plans, screensLabel, site } from "./site";
+import { faqs, plans, screensLabel, site, social } from "./site";
 
 export const KEYWORD = "IPTV Portugal";
 
@@ -56,6 +56,7 @@ export function organizationLd() {
     url: site.url,
     email: site.email || undefined,
     logo: `${site.url}/brand/logo-512.png`,
+    sameAs: social.map((s) => s.href),
     areaServed: { "@type": "Country", name: "Portugal" },
     contactPoint: {
       "@type": "ContactPoint",
