@@ -71,7 +71,7 @@ export default async function PostPage({ params }: Props) {
           dateModified: post.updated ?? post.date,
           inLanguage: "pt-PT",
           author: authorLd(),
-          publisher: { "@type": "Organization", name: site.name, logo: { "@type": "ImageObject", url: `${site.url}/icon.svg` } },
+          publisher: { "@type": "Organization", name: site.name, logo: { "@type": "ImageObject", url: `${site.url}/brand/logo-512.png` } },
           mainEntityOfPage: `${site.url}/blog/${post.slug}`,
           image: `${site.url}/blog/${post.slug}/opengraph-image`,
         }}

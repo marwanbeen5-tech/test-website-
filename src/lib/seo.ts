@@ -55,7 +55,7 @@ export function organizationLd() {
     name: site.name,
     url: site.url,
     email: site.email || undefined,
-    logo: `${site.url}/icon.svg`,
+    logo: `${site.url}/brand/logo-512.png`,
     areaServed: { "@type": "Country", name: "Portugal" },
     contactPoint: {
       "@type": "ContactPoint",
