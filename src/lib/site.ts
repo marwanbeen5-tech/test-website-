@@ -26,7 +26,6 @@ export const social = [
   { label: "Instagram", href: "https://www.instagram.com/portugaliptvtop/" },
   { label: "TikTok", href: "https://www.tiktok.com/@portugaliptv.top" },
   { label: "YouTube", href: "https://www.youtube.com/@portugaliptvtop" },
-  { label: "Pinterest", href: "https://www.pinterest.com/portugaliptvtop/" },
 ];
 
 export const nav = [
